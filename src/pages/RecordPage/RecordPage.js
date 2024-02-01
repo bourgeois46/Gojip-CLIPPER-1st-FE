@@ -2,6 +2,12 @@ import React from 'react';
 import Nav from '../../components/Nav/Nav';
 import './RecordPage.css';
 import record_slash from "../../assets/images/record_slash.png";
+import Checkbox from '../../components/CheckBox/Checkbox';
+
+const originData = [
+    { id: 0, text: "있다" },
+    { id: 1, text: "없다" },
+];
 
 function RecordPage() {
     return (
@@ -30,13 +36,9 @@ function RecordPage() {
                             <span className="charge-unit">원</span>
                         </div>
                         <div className="charge-item-down">
-                            <label className="charge-option-yes">
-                                <input type="checkbox" className="charge-yes" value="있다" /> 있다
-                            </label>
-                            <label className="charge-option-no">
-                                <input type="checkbox" className="charge-no" value="없다" /> 없다
-                            </label>
-            
+                            {originData.map((item) => (
+                                <Checkbox key={item.id} text={item.text} />
+                            ))}
                         </div>
                     </div>
                 </div>
