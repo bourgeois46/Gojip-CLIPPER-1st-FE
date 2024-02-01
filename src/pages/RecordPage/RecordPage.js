@@ -1,15 +1,18 @@
-import React from 'react';
+import React , { useState } from 'react';
 import Nav from '../../components/Nav/Nav';
 import './RecordPage.css';
 import record_slash from "../../assets/images/record_slash.png";
 import Checkbox from '../../components/CheckBox/Checkbox';
 
-const originData = [
-    { id: 0, text: "있다" },
-    { id: 1, text: "없다" },
-];
 
 function RecordPage() {
+    const [isChecked, setIsChecked] = useState({ yes: false, no: false });
+    
+    const handleCheckboxChange = (e) => {
+        const { name } = e.target;
+        setIsChecked({ yes: name === 'yes', no: name === 'no' });
+    };
+
     return (
         <div className='recordPage'>
             <div className="recordPage-top">
@@ -36,9 +39,9 @@ function RecordPage() {
                             <span className="charge-unit">원</span>
                         </div>
                         <div className="charge-item-down">
-                            {originData.map((item) => (
-                                <Checkbox key={item.id} text={item.text} />
-                            ))}
+                    
+                            <Checkbox key={0} text={"있다"} name='yes' checked={isChecked.yes} onChange={handleCheckboxChange} />
+                            <Checkbox key={1} text={"없다"} name='no' checked={isChecked.no} onChange={handleCheckboxChange}/>
                         </div>
                     </div>
                 </div>

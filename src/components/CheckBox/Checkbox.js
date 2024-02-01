@@ -2,10 +2,10 @@ import React from 'react'
 import styled from "styled-components";
 import checkedImage from '../../assets/images/check.png'
 
-function Checkbox({ text}) {
+function Checkbox({ text, checked, onChange, name}) {
     return (
         <>
-            <StyledInput type="checkbox" id={text} name={text} />
+            <StyledInput type="checkbox" id={text} name={name} checked={checked} onChange={onChange}/>
             <StyledLabel htmlFor={text}>
                 <StyledP>{text}</StyledP>
             </StyledLabel>
@@ -54,6 +54,7 @@ input[type="checkbox"]:checked + &:after {
 }
 
 
+
 `;
 const StyledInput = styled.input`
     position: absolute;
@@ -67,5 +68,7 @@ const StyledInput = styled.input`
 `;
 
 const StyledP = styled.p`
-    margin-left: 0.5rem;
+    margin-left: 5.85px;
+    font-size : 13.14px;
+    color: black; 
 `;
