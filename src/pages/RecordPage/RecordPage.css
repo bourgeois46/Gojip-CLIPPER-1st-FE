@@ -73,7 +73,7 @@
     height: 20.93px;
     padding-left: 5px;
     font-size: 9.86px;
-    border: 1px solid #CCCCCC;
+    border: 0.66px solid #CCCCCC;
 }
 
 .monthly-rent-input {
@@ -81,7 +81,7 @@
     height: 20.93px;
     padding-left: 5px;
     font-size: 9.86px;
-    border: 1px solid #CCCCCC;
+    border: 0.66px solid #CCCCCC;
 }
 
 .slash {
@@ -110,10 +110,46 @@
     margin-top: 23px;
 }
 
-.list-item {
-    margin-left: 27px;
+.list-item{
+    height: 122px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 21px;
+    margin-right: 16px;
+    margin-top: 15px;
+    background-color: #F5F5F5;
+    border-radius: 20px;
+}
+
+
+.list-item-row {
+    margin-top: 16px;
+    margin-left: 15px;
     display:flex;
     flex-direction: row;
     gap:22px;
 
+}
+
+.maintenance-row{
+    margin-top: 31.31px;
+    display: flex;
+    flex-direction: row;
+    margin-right: 6.91px;
+    justify-content: flex-end;
+}
+
+.maintenance-input {
+    width: 106.47px;
+    height: 21.69px;
+    padding-left: 5px;
+    font-size: 9.86px;
+    border: 0.66px solid #CCCCCC;
+}
+
+.maintenance-unit {
+    font-size:13.14px;
+    color: black;
+    margin-left: 2.63px;
+    margin-top: 6px;
 }

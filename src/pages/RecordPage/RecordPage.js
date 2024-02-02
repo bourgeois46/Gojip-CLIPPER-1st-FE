@@ -6,15 +6,27 @@ import Checkbox from '../../components/CheckBox/Checkbox';
 import Listitem from '../../components/ListItem/Listitem'
 
 
+const chargeData = [
+    {type:0, name:"수도세"},
+    {type:1, name:"난방비"},
+    {type:2, name:"전기세"},
+    {type:3, name:"인터넷비"}
+];
+
 function RecordPage() {
     const [isChecked, setIsChecked] = useState({ yes: false, no: false });
-   //const [isListVisible, setListVisible] = useState(false); // Listitem 컴포넌트가 보이는지 상태를 관리하는 state
-
 
     const handleCheckboxChange = (e) => {
         const { name } = e.target;
-        setIsChecked({ yes: name === 'yes', no: name === 'no' });
-
+        setIsChecked((prevState) => {
+            if (prevState[name]) {
+                // 체크박스가 이미 선택되어 있다면 원상태로 돌린다.
+                return { yes: false, no: false };
+            } else {
+                // 체크박스가 선택되지 않았다면, 선택한 체크박스만 true로 설정한다.
+                return { yes: name === 'yes', no: name === 'no' };
+            }
+        });
     };
 
     return (
@@ -50,8 +62,15 @@ function RecordPage() {
                     </div>
                 </div>
                 <div className='list-item'>
-                <Listitem name="공간" type="공간" />
-                <Listitem name="분리배출공간" type="분리배출공간" />
+                    <div className='list-item-row'>
+                        {chargeData.map((item) => (
+                            <Listitem type={item.type} name={item.name} />
+                        ))}
+                    </div>
+                    <div className='maintenance-row'>
+                        <input type="text" className="maintenance-input" placeholder="입력" />
+                        <span className="maintenance-unit">원</span>
+                    </div>
                 </div>
             </div>
 
