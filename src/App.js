@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import MainPage from "./pages/MainPage/MainPage";
+import LoginPage from "./pages/LoginPage/LoginPage";
 
 function App() {
   function setScreenSize() {
@@ -10,7 +11,10 @@ function App() {
     setScreenSize();
   });
 
-  return <MainPage />;
+  return <LoginPage />;
+  {
+    /* <MainPage /> */
+  }
 }
 
 export default App;
