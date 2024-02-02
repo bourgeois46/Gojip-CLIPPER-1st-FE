@@ -1,10 +1,15 @@
-import React from 'react';
-import './MainPage.css';
+import React from "react";
+import "./MainPage.css";
+import Nav from "../../components/Nav/Nav";
 
-function MainPage() {
+const MainPage = () => {
   return (
-    <div className="main-page">MainPage</div>
-  )
-}
+    <div>
+      <div className="main-page">
+        <Nav />
+      </div>
+    </div>
+  );
+};
 
 export default MainPage;
