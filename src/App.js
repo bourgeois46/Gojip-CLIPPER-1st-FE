@@ -1,5 +1,6 @@
-import React, { useEffect } from 'react';
-import RecordPage from './pages/RecordPage/RecordPage';
+import React, { useEffect } from "react";
+import MainPage from "./pages/MainPage/MainPage";
+
 
 function App() {
   function setScreenSize() {
@@ -10,9 +11,8 @@ function App() {
     setScreenSize();
   });
 
-  return (
-    <RecordPage />
-  );
+  return <MainPage />;
+  
 }
 
 export default App;
