@@ -3,14 +3,18 @@ import Nav from '../../components/Nav/Nav';
 import './RecordPage.css';
 import record_slash from "../../assets/images/record_slash.png";
 import Checkbox from '../../components/CheckBox/Checkbox';
+import Listitem from '../../components/ListItem/Listitem'
 
 
 function RecordPage() {
     const [isChecked, setIsChecked] = useState({ yes: false, no: false });
-    
+   //const [isListVisible, setListVisible] = useState(false); // Listitem 컴포넌트가 보이는지 상태를 관리하는 state
+
+
     const handleCheckboxChange = (e) => {
         const { name } = e.target;
         setIsChecked({ yes: name === 'yes', no: name === 'no' });
+
     };
 
     return (
@@ -44,6 +48,10 @@ function RecordPage() {
                             <Checkbox key={1} text={"없다"} name='no' checked={isChecked.no} onChange={handleCheckboxChange}/>
                         </div>
                     </div>
+                </div>
+                <div className='list-item'>
+                <Listitem name="공간" type="공간" />
+                <Listitem name="분리배출공간" type="분리배출공간" />
                 </div>
             </div>
 

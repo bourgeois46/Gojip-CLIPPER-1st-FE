@@ -109,3 +109,11 @@
     margin-right: 17.69px;
     margin-top: 23px;
 }
+
+.list-item {
+    margin-left: 27px;
+    display:flex;
+    flex-direction: row;
+    gap:22px;
+
+}
