@@ -14,6 +14,7 @@ const chargeData = [
 ];
 
 function RecordPage() {
+
     const [isChecked, setIsChecked] = useState({ yes: false, no: false });
 
     const handleCheckboxChange = (e) => {
@@ -61,6 +62,7 @@ function RecordPage() {
                         </div>
                     </div>
                 </div>
+                {isChecked.yes && (
                 <div className='list-item'>
                     <div className='list-item-row'>
                         {chargeData.map((item) => (
@@ -72,6 +74,7 @@ function RecordPage() {
                         <span className="maintenance-unit">원</span>
                     </div>
                 </div>
+                )}
             </div>
 
         </div>
