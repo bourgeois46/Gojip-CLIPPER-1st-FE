@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import MainPage from "./pages/MainPage/MainPage";
 import LoginPage from "./pages/LoginPage/LoginPage";
 
+
 function App() {
   function setScreenSize() {
     let vh = window.innerHeight * 0.01;
@@ -11,10 +12,10 @@ function App() {
     setScreenSize();
   });
 
-  return <LoginPage />;
-  {
-    /* <MainPage /> */
-  }
+
+  return <MainPage />;
+  
+
 }
 
 export default App;

@@ -4,6 +4,7 @@ import homeyellow from "../../assets/images/homeYellow.png";
 import sidebarbutton from "../../assets/images/sidebarButton.png";
 
 const Nav = () => {
+
   return (
     <div className="nav-container">
       <div className="go-home">Go집</div>
