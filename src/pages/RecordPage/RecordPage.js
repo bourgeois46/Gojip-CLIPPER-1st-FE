@@ -2,8 +2,7 @@ import React , { useState } from 'react';
 import Nav from '../../components/Nav/Nav';
 import './RecordPage.css';
 import ChargeBox from './Charge/ChargeBox';
-
-
+import HomeBox from './Home/HomeBox';
 
 function RecordPage() {
 
@@ -33,6 +32,7 @@ function RecordPage() {
             </div>
 
             <ChargeBox isChecked={isChecked} handleCheckboxChange={handleCheckboxChange} />
+            <HomeBox />
         </div>
     );
 }
