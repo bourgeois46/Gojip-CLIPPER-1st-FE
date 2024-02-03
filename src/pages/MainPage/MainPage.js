@@ -8,7 +8,6 @@ const MainPage = () => {
     <div>
       <div className="main-page">
         <Nav />
-        <LoginPage />
       </div>
     </div>
   );

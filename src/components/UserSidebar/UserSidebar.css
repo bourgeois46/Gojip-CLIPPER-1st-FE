@@ -1,0 +1,39 @@
+.usersidebar_parent {
+  height: 100vh;
+  position: relative;
+}
+
+.usersidebar {
+  height: 700px;
+  position: relative;
+  top: -760px; /* 사이드바 위치조절*/
+  left: 120px;
+  width: 280px;
+  background-image: linear-gradient(#ffffff 60%, #f3f3f3 60% 90%, #ffffff 90%);
+  //opacity: 0.5;
+  align-items: center;
+  z-index: 1;
+  overflow: visible;
+}
+
+.img-container {
+  padding: 30px;
+  background-color: #ffef64;
+  height: 8%;
+}
+
+.nav-link {
+  color: black;
+  text-decoration: none;
+  top: 70px;
+  font-family: "Inter";
+  font-size: 13px;
+}
+
+.Footer {
+  position: absolute;
+  height: 30%;
+  right: 100px;
+  bottom: 100px;
+  z-index: 2;
+}
