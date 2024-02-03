@@ -21,9 +21,9 @@ function GuestSidebar() {
                 <GuestSidebarItem menu={menu} />
               </NavLink>
             ))}
+            <Footer className="Footer" />
           </div>
         </div>
-        <Footer className="Footer" />
         <div>
           <img src={loginbutton} alt="loginbutton" className="loginbutton" />
           <div className="go-login-text">로그인하러가기</div>
