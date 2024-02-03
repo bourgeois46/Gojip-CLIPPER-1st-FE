@@ -78,6 +78,7 @@ const StyledThumb = styled.div`
     border-radius: 20px;
     outline: none;
     top: -8.2px;
+    box-shadow: 0.5px 0.5px 0.5px 0.5px #C8C8C8;
 `;
 
 const TickContainer = styled.div`
