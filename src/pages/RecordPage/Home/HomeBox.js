@@ -22,15 +22,15 @@ function HomeBox({ isChecked, handleCheckboxChange, iconChecked, handleIconCheck
                 </div>
                 <div className='line-home'/>
                 <div className='home-details'>
-                    <div className="home-item-row">
+                    <div className='home-item-row'>
                         <input type="text" className="around-input" placeholder="입력" />
                         <span className="around-unit">평</span>
                     </div>
-                    <div className='home-item-row'>
+                    <div className='home-item-icon'>
                         <IconCheckbox name="yes" key={0} type="good" isChecked={iconChecked.yes} onChange={handleIconCheck}/>
                         <IconCheckbox name="no" key={1} type="bad" isChecked={iconChecked.no} onChange={handleIconCheck}/>
                     </div>
-                    <div className='time-silder'>
+                    <div className='time-slider'>
                         <TimeSlider />
                     </div>
                     <div className='checkbox-item-row'>

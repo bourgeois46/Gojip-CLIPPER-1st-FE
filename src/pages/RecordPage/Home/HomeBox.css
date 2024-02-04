@@ -1,3 +1,91 @@
-.timeSlider {
-    margin-left: 20px;
+.home-box {
+margin-top: 62.31px;
+}
+
+.home-title{
+    font-size: 15.77px;
+    font-weight: bold;
+    margin-left: 17.63px;
+}
+
+.home-item-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.home-details{
+    display: flex;
+    flex-direction: column;
+}
+
+.home-text1{
+    margin-left: 30.67px;
+    font-size: 13.14px;
+    text-align: left;
+    margin-top: 29.69px;
+}
+
+.home-text2 {
+    margin-left: 30.67px;
+    font-size: 13.14px;
+    text-align: left;
+    margin-top: 37.46px;
+
+}
+
+.home-text3 {
+    margin-left: 30.67px;
+    font-size: 13.14px;
+    text-align: left;
+    margin-top: 37.46px;
+}
+
+.home-text4 {
+    margin-left: 30.67px;
+    font-size: 13.14px;
+    text-align: left;
+    margin-top: 37.46px;
+}
+
+.line-home {
+    width: 1px;
+    height: 211px;
+    background-color: #C8C8C8;
+    margin-left: 25.33px;
+    margin-right: 19px;
+    margin-top: 12.96px;
+}
+
+.home-item-icon {
+    display: flex;
+    flex-direction: row;
+    gap: 43.29px;
+    margin-top: 26.46px;
+}
+
+
+.checkbox-item-row{
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    margin-top: 27px;
+}
+
+.around-input{
+    width: 51.93px;
+    height: 20.93px;
+    padding-left: 5px;
+    font-size: 9.86px;
+    border: 0.66px solid #CCCCCC;
+    margin-top: 23.58px;
+}
+
+.time-slider{
+    margin-top: 30px;
+}
+
+.around-unit{
+    margin-left: 3px;
+    font-size: 13.14px;
+    margin-top: 26.21px;
 }
