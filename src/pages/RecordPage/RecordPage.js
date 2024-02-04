@@ -10,6 +10,7 @@ function RecordPage() {
 
     const [isOneChecked, handleOneCheckboxChange] = useOneCheckbox();
     const [isChecked, handleCheckboxChange] = useCheckbox();
+    const [iconChecked, handleIconCheck] = useOneCheckbox();
 
 
     return (
@@ -23,7 +24,7 @@ function RecordPage() {
             </div>
 
             <ChargeBox isChecked={isOneChecked} handleCheckboxChange={handleOneCheckboxChange} />
-            <HomeBox isChecked={isChecked} handleCheckboxChange={handleCheckboxChange} />
+            <HomeBox isChecked={isChecked} handleCheckboxChange={handleCheckboxChange} iconChecked={iconChecked} handleIconCheck={handleIconCheck}/>
         </div>
     );
 }

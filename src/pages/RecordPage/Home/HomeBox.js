@@ -1,14 +1,15 @@
 import React from 'react';
 import Checkbox from '../../../components/CheckBox/Checkbox';
 import './HomeBox.css';
-import TimeSlider from '../../../components/TimeSlider/TimeSlider'
+import TimeSlider from '../../../components/TimeSlider/TimeSlider';
+import IconCheckbox from '../../../components/CheckBox/IconCheckbox';
 
 const homeData = [
     {type: 0, name:"층간소음"},
     {type: 1, name:"외부소음"},
     {type: 2, name:"방간소음"}
 ]
-function HomeBox({ isChecked, handleCheckboxChange }) {
+function HomeBox({ isChecked, handleCheckboxChange, iconChecked, handleIconCheck }) {
     return (
         <div className='home-box'>
             <div className='home-title'>집</div>
@@ -26,7 +27,8 @@ function HomeBox({ isChecked, handleCheckboxChange }) {
                         <span className="around-unit">평</span>
                     </div>
                     <div className='home-item-row'>
-                        
+                        <IconCheckbox name="yes" key={0} type="good" isChecked={iconChecked.yes} onChange={handleIconCheck}/>
+                        <IconCheckbox name="no" key={1} type="bad" isChecked={iconChecked.no} onChange={handleIconCheck}/>
                     </div>
                     <div className='time-silder'>
                         <TimeSlider />
