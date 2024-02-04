@@ -1,0 +1,63 @@
+.guestsidebar_container {
+  height: 100vh;
+  position: relative;
+  flex-direction: column;
+  justify-content: flex-end;
+  overflow: visible;
+}
+
+.guestsidebar {
+  height: 700px;
+  position: relative;
+  bottom: 910px; /* 사이드바 위치조절*/
+  left: 120px;
+  width: 280px;
+  background-image: linear-gradient(#ffffff 40%, #f3f3f3 40% 90%, #ffffff 90%);
+  //opacity: 0.5;
+  align-items: center;
+  z-index: 1;
+  overflow: visible;
+}
+
+.img-container {
+  padding: 30px;
+  background-color: #ffef64;
+  height: 8%;
+}
+
+.navlink_container {
+  margin-top: 130px;
+}
+
+.nav-link {
+  color: black;
+  text-decoration: none;
+  top: 70px;
+  font-family: "Inter";
+  font-size: 19px;
+}
+
+.Footer {
+  position: absolute;
+  height: 30%;
+  right: 100px;
+  bottom: 100px;
+  z-index: 2;
+}
+
+.loginbutton {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  right: 180px;
+  bottom: 95px;
+}
+
+.go-login-text {
+  position: absolute;
+  right: 70px;
+  bottom: 100px;
+  font-family: "Inter";
+  font-size: 15px;
+  font-weight: bold;
+}
