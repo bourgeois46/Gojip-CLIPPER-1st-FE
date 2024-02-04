@@ -9,7 +9,7 @@
 .guestsidebar {
   height: 700px;
   position: relative;
-  top: -760px; /* 사이드바 위치조절*/
+  bottom: 910px; /* 사이드바 위치조절*/
   left: 120px;
   width: 280px;
   background-image: linear-gradient(#ffffff 40%, #f3f3f3 40% 90%, #ffffff 90%);

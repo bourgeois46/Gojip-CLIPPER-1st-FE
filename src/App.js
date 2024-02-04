@@ -39,9 +39,9 @@ function App() {
         <BrowserRouter>
           <GuestSidebar />
           <Routes>
-            <Route path="/" element={GuestSidebar} />
-            <Route path="/" element={GuestSidebar} />
-            <Route path="/" element={GuestSidebar} />
+            <Route path="/" element={UserSidebar} />
+            <Route path="/" element={UserSidebar} />
+            <Route path="/" element={UserSidebar} />
           </Routes>
         </BrowserRouter>
       </div>
