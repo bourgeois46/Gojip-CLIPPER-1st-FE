@@ -1,0 +1,131 @@
+.charge-box {
+    margin-top: 31.54px;
+
+}
+
+.charge-title {
+    font-size: 15.77px;
+    font-weight: bold;
+    margin-left: 17.63px;
+}
+
+.charge-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.charge-item-up {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top:22.09px;
+}
+
+.charge-item-down {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top:22px;
+    gap:58.22px;
+    margin-left: 6px;
+}
+
+.charge-label-deposit {
+    margin-left: 30.67px;
+    font-size: 13.14px;
+    text-align: left;
+    margin-top: 24.72px;
+}
+
+.charge-label-monthly-rent {
+    margin-left: 30.67px;
+    font-size: 13.14px;
+    text-align: left;
+    margin-top: 38.28px;
+}
+
+.deposit-input {
+    width: 51.93px;
+    height: 20.93px;
+    padding-left: 5px;
+    font-size: 9.86px;
+    border: 0.66px solid #CCCCCC;
+}
+
+.monthly-rent-input {
+    width: 51.93px;
+    height: 20.93px;
+    padding-left: 5px;
+    font-size: 9.86px;
+    border: 0.66px solid #CCCCCC;
+}
+
+.slash {
+    margin: 0 10px;
+}
+
+
+.charge-unit {
+    margin-left: 3px;
+    font-size: 13.14px;
+}
+
+
+.charge-item-row{
+    display: flex;
+    flex-direction: row;
+
+}
+
+.line-charge {
+    width: 1px;
+    height: 85px;
+    background-color: #C8C8C8;
+    margin-left: 21.33px;
+    margin-right: 17.69px;
+    margin-top: 23px;
+}
+
+.list-item{
+    height: 122px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 21px;
+    margin-right: 16px;
+    margin-top: 15px;
+    background-color: #F5F5F5;
+    border-radius: 20px;
+}
+
+
+.list-item-row {
+    margin-top: 16px;
+    margin-left: 15px;
+    display:flex;
+    flex-direction: row;
+    gap:22px;
+
+}
+
+.maintenance-row{
+    margin-top: 31.31px;
+    display: flex;
+    flex-direction: row;
+    margin-right: 6.91px;
+    justify-content: flex-end;
+}
+
+.maintenance-input {
+    width: 106.47px;
+    height: 21.69px;
+    padding-left: 5px;
+    font-size: 9.86px;
+    border: 0.66px solid #CCCCCC;
+}
+
+.maintenance-unit {
+    font-size:13.14px;
+    color: black;
+    margin-left: 2.63px;
+    margin-top: 6px;
+}
