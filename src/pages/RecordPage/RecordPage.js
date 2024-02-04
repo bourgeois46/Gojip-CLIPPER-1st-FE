@@ -2,25 +2,16 @@ import React , { useState } from 'react';
 import Nav from '../../components/Nav/Nav';
 import './RecordPage.css';
 import ChargeBox from './Charge/ChargeBox';
-
-
+import HomeBox from './Home/HomeBox';
+import useOneCheckbox from '../../hooks/useOneCheckbox';
+import useCheckbox from '../../hooks/useCheckbox';
 
 function RecordPage() {
 
-    const [isChecked, setIsChecked] = useState({ yes: false, no: false });
+    const [isOneChecked, handleOneCheckboxChange] = useOneCheckbox();
+    const [isChecked, handleCheckboxChange] = useCheckbox();
+    const [iconChecked, handleIconCheck] = useOneCheckbox();
 
-    const handleCheckboxChange = (e) => {
-        const { name } = e.target;
-        setIsChecked((prevState) => {
-            if (prevState[name]) {
-                // 체크박스가 이미 선택되어 있다면 원상태로 돌린다.
-                return { yes: false, no: false };
-            } else {
-                // 체크박스가 선택되지 않았다면, 선택한 체크박스만 true로 설정한다.
-                return { yes: name === 'yes', no: name === 'no' };
-            }
-        });
-    };
 
     return (
         <div className='recordPage'>
@@ -32,7 +23,8 @@ function RecordPage() {
                 서울 서대문구 신촌동 2-195
             </div>
 
-            <ChargeBox isChecked={isChecked} handleCheckboxChange={handleCheckboxChange} />
+            <ChargeBox isChecked={isOneChecked} handleCheckboxChange={handleOneCheckboxChange} />
+            <HomeBox isChecked={isChecked} handleCheckboxChange={handleCheckboxChange} iconChecked={iconChecked} handleIconCheck={handleIconCheck}/>
         </div>
     );
 }
