@@ -16,7 +16,7 @@ function UserSidebar() {
 
   return (
     <div>
-      <div className="usersidebar_parent">
+      <div className="usersidebar_container">
         <div className="usersidebar">
           <div className="img-container">
             <img src={sidelogo} alt="sidelogo" />
