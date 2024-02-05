@@ -15,9 +15,9 @@ function App() {
   });
 
   return (
-    /*<LoginPage />*/
+    /* <LoginPage />*/
 
-    /* UserSidebar*/
+    /* UserSidebar
     <>
       <MainPage />
       <div className="App">
@@ -30,9 +30,9 @@ function App() {
           </Routes>
         </BrowserRouter>
       </div>
-    </>
+    </>*/
 
-    /* GuestSidebar 
+    /* GuestSidebar */
     <>
       <MainPage />
       <div className="App">
@@ -45,7 +45,7 @@ function App() {
           </Routes>
         </BrowserRouter>
       </div>
-    </>*/
+    </>
   );
 }
 
