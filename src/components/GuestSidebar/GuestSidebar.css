@@ -1,19 +1,17 @@
 .guestsidebar_container {
   height: 1000px;
   position: relative;
-  flex-direction: column;
-  justify-content: flex-end;
-  overflow: visible;
 }
 
 .guestsidebar {
-  height: 700px;
+  height: 1100px;
   position: relative;
-  bottom: 910px; /* 사이드바 위치조절*/
+  top: -1190px; /* 사이드바 위치조절*/
   left: 120px;
   width: 280px;
-  background-image: linear-gradient(#ffffff 40%, #f3f3f3 40% 90%, #ffffff 90%);
+  background-image: linear-gradient(#ffffff 40%, #f3f3f3 40% 95%, #ffffff 95%);
   //opacity: 0.5;
+  background-color: black;
   align-items: center;
   z-index: 1;
   overflow: visible;
@@ -35,14 +33,6 @@
   top: 70px;
   font-family: "Inter";
   font-size: 19px;
-}
-
-.Footer {
-  position: absolute;
-  height: 30%;
-  right: 100px;
-  bottom: 100px;
-  z-index: 2;
 }
 
 .loginbutton {

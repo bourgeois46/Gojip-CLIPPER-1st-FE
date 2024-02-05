@@ -16,19 +16,16 @@ function UserSidebar() {
 
   return (
     <div>
-      <div className="usersidebar_container">
-        <div className="usersidebar">
-          <div className="img-container">
-            <img src={sidelogo} alt="sidelogo" />
-            {menus.map((menu, id) => {
-              return (
-                <NavLink className="nav-link" to={menu.path} key={id}>
-                  <UserSidebarItem menu={menu} />
-                </NavLink>
-              );
-            })}
-            <Footer className="Footer" />
-          </div>
+      <div className="usersidebar">
+        <div className="img-container">
+          <img src={sidelogo} alt="sidelogo" className="side-logo" />
+          {menus.map((menu, id) => {
+            return (
+              <NavLink className="nav-link" to={menu.path} key={id}>
+                <UserSidebarItem menu={menu} />
+              </NavLink>
+            );
+          })}
         </div>
       </div>
     </div>

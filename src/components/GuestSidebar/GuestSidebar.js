@@ -21,7 +21,6 @@ function GuestSidebar() {
                 <GuestSidebarItem menu={menu} />
               </NavLink>
             ))}
-            <Footer className="Footer" />
           </div>
         </div>
         <div>

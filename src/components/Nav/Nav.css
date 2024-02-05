@@ -1,17 +1,15 @@
 .nav-container {
-
-  height: calc(var(--vh, 1vh) * 15);
+  height: 130px;
   position: relative;
   justify-content: space-between;
   align-items: center;
-  padding: 0 1.5vh;
+  padding: 0 15px;
   background-color: white;
-  border-bottom: 0.2vh solid #ccc;
+  border-bottom: 1px solid #ccc;
 }
 
 .go-home {
-  height: calc(var(--vh, 1vh) * 20);
-  position: absolute;
+  height: 180px;
   display: flex;
   align-items: center;
   font-family: "Inter";
@@ -19,24 +17,20 @@
   font-size: 2em;
   font-weight: bold;
   color: #333333;
-  padding: 1vh;
-  object-fit: contain;
+  padding: 10px;
 }
 
 .homeyellow-icon {
-  height: calc(var(--vh, 1vh) * 30);
   position: absolute;
-  top: 75%;
-  margin-left: 85px;
-  width: 3vh;
-  object-fit: contain;
-  transform: translateY(-50%);
+  margin-right: 100px;
+  margin-left: 105px;
+  width: 35px;
+  top: 83px;
 }
 
 .sidebarbutton-icon {
   position: absolute;
-  top: 75%;
-  right: 2vh;
-  object-fit: contain;
-  transform: translateY(-50%);
+  margin-left: 340px;
+  width: 30px;
+  top: 90px;
 }
