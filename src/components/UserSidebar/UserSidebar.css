@@ -1,10 +1,15 @@
-.usersidebar {
-  height: 90vh;
+.usersidebar_container {
+  height: 100%;
   position: relative;
-  top: -1190px; /* 사이드바 위치조절*/
+}
+
+.usersidebar {
+  height: 850px;
+  position: absolute;
+  top: -851px; /* 사이드바 위치조절*/
   left: 120px;
   width: 280px;
-  background-image: linear-gradient(#ffffff 40%, #f3f3f3 40% 95%, #ffffff 95%);
+  background-image: linear-gradient(to bottom, #ffffff 50%, #f3f3f3 50%);
   //opacity: 0.5;
   align-items: center;
   z-index: 1;
@@ -14,12 +19,11 @@
 .img-container {
   padding: 30px;
   background-color: #ffef64;
-  height: 8%;
 }
 
 .side-logo {
-  width: 170px;
-  height: 100px;
+  width: 130px;
+  height: 85px;
 }
 
 .nav-link {
