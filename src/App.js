@@ -37,7 +37,6 @@ function App() {
     /* UserSidebar
     <>
       <MainPage />
-        <BrowserRouter>
           <UserSidebar />
           <Routes>
             <Route path="/" element={<Layout />} />
@@ -45,8 +44,7 @@ function App() {
             <Route path="/" element={<Layout />} />
             <Route path="/" element={<Layout />} />
             <Route path="/" element={<Layout />} />
-          </Routes>
-        </BrowserRouter>  
+          </Routes> 
     </>*/
 
     /* GuestSidebar */
