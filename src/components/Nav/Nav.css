@@ -1,23 +1,23 @@
-.nav-container {
-  height: 130px;
-  position: relative;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 15px;
-  background-color: white;
-  border-bottom: 1px solid #ccc;
-}
-
 .go-home {
-  height: 180px;
+  position: absolute;
+  margin-left: 17px;
+  width: 420px;
+  top: 80px;
   display: flex;
-  align-items: center;
+  color: #333333;
+
   font-family: "Inter";
   font-style: normal;
   font-size: 2em;
   font-weight: bold;
-  color: #333333;
-  padding: 10px;
+}
+
+.bottom-line {
+  position: absolute;
+  border: none;
+  border-top: 1px solid #ccc;
+  top: 120px;
+  width: 400px;
 }
 
 .homeyellow-icon {
