@@ -1,11 +1,10 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { NavLink } from "react-router-dom";
 import "./UserSidebar.css";
 import UserSidebarItem from "./UserSidebarItem.js";
 import sidelogo from "../../assets/images/sideLogo.png";
-import Footer from "../Footer/Footer.js";
 
-function UserSidebar() {
+const UserSidebar = () => {
   const menus = [
     { name: "기록 하기", path: "/", id: 0 },
     { name: "기록 보기", path: "/", id: 1 },
@@ -15,24 +14,28 @@ function UserSidebar() {
   ];
 
   return (
-    <div>
-      <div className="usersidebar_parent">
-        <div className="usersidebar">
-          <div className="img-container">
-            <img src={sidelogo} alt="sidelogo" />
-            {menus.map((menu, id) => {
-              return (
-                <NavLink className="nav-link" to={menu.path} key={id}>
-                  <UserSidebarItem menu={menu} />
-                </NavLink>
-              );
-            })}
-            <Footer className="Footer" />
-          </div>
+    <div className="usersidebar_container">
+      <div className="usersidebar">
+        <div className="img-container">
+          <img src={sidelogo} alt="sidelogo" className="side-logo" />
+          {menus.map((menu, id) => {
+            return (
+              <NavLink
+                className="nav-link"
+                to={menu.path}
+                key={id}
+                exact
+                style={{ color: "black", textDecoration: "none" }}
+                //activeStyle={{ color: "black" }}
+              >
+                <UserSidebarItem menu={menu} />
+              </NavLink>
+            );
+          })}
         </div>
       </div>
     </div>
   );
-}
+};
 
 export default UserSidebar;

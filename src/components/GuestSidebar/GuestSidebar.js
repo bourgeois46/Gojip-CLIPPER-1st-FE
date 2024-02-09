@@ -17,11 +17,17 @@ function GuestSidebar() {
         <div className="img-container">
           <div className="navlink_container">
             {menus.map((menu, id) => (
-              <NavLink className="nav-link" to={menu.path} key={id}>
+              <NavLink
+                className="nav-link"
+                to={menu.path}
+                key={id}
+                exact
+                style={{ color: "black", textDecoration: "none" }}
+                //activeStyle={{ color: "black" }}
+              >
                 <GuestSidebarItem menu={menu} />
               </NavLink>
             ))}
-            <Footer className="Footer" />
           </div>
         </div>
         <div>
