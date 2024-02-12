@@ -1,4 +1,42 @@
 .main-page {
   height: 100vh;
   background-color: white;
+  position: relative;
+  display: flex;
+  flex-direction: column; /* 수직 방향으로 나열 */
+  align-items: center; /* 수직 가운데 정렬 */
+  padding-top: 170px;
+  overflow-y: auto;
+}
+
+.main2,
+.main3,
+.main4,
+.main5,
+.main6,
+.main7 {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 120px; /* 이미지 사이 간격 조절 */
+}
+
+.main1 {
+  display: block;
+  margin-left: 30px;
+  margin-right: auto;
+  margin-bottom: 70px;
+}
+
+@keyframes scaleIn {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+.image-animation {
+  animation: scaleIn 0.5s ease-in-out; /* 애니메이션 이름, 지속 시간, 타이밍 함수 설정 */
 }

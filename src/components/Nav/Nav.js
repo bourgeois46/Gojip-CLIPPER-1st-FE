@@ -28,7 +28,7 @@ const Nav = () => {
   };
 
   return (
-    <div>
+    <div className="nav-box">
       <div className="go-home">Go집</div>
       <hr className="bottom-line" />
       <img src={homeyellow} alt="HomeYellow" className="homeyellow-icon" />

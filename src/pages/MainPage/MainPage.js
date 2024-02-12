@@ -1,11 +1,29 @@
 import React from "react";
 import "./MainPage.css";
+import main1 from "../../assets/images/main-1.png";
+import main2 from "../../assets/images/main-2.png";
+import main3 from "../../assets/images/main-3.png";
+import main4 from "../../assets/images/main-4.png";
+import main5 from "../../assets/images/main-5.png";
+import main6 from "../../assets/images/main-6.png";
+import main7 from "../../assets/images/main-7.png";
 import Nav from "../../components/Nav/Nav";
-import LoginPage from "../LoginPage/LoginPage";
-import UserSidebar from "../../components/UserSidebar/UserSidebar";
 
 const MainPage = () => {
-  return <div className="main-page"></div>;
+  return (
+    <div>
+      <Nav />
+      <div className="main-page">
+        <img src={main1} alt="main-1" className="main1 image-animation" />
+        <img src={main2} alt="main-2" className="main2 image-animation" />
+        <img src={main3} alt="main-3" className="main3 image-animation" />
+        <img src={main4} alt="main-4" className="main4 image-animation" />
+        <img src={main5} alt="main-5" className="main5 image-animation" />
+        <img src={main6} alt="main-6" className="main6 image-animation" />
+        <img src={main7} alt="main-7" className="main7 image-animation" />
+      </div>
+    </div>
+  );
 };
 
 export default MainPage;
