@@ -6,14 +6,16 @@ import Nav from "../../components/Nav/Nav";
 
 const LoginPage = () => {
   return (
-    <div className="login-page">
+    <div>
       <Nav />
-      <div className="logintext-container">
-        <img src={logintext} alt="logintext" />
-      </div>
-      <div className="loginorsignup">로그인/회원가입</div>
-      <div className="loginbutton-container">
-        <img src={loginbutton} alt="loginbutton" />
+      <div className="login-page">
+        <div className="logintext-container">
+          <img src={logintext} alt="logintext" />
+        </div>
+        <div className="loginorsignup">로그인/회원가입</div>
+        <div className="loginbutton-container">
+          <img src={loginbutton} alt="loginbutton" />
+        </div>
       </div>
     </div>
   );

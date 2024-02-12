@@ -33,9 +33,15 @@ function App() {
   });
 
   return (
-    /* <LoginPage />*/
+    /**/
+    <>
+      <LoginPage />
+      <Routes>
+        <Route path="/" element={<Layout />}></Route>
+      </Routes>
+    </>
 
-    /* UserSidebar*/
+    /* UserSidebar
     <>
       <MainPage />
       <Routes>
@@ -47,7 +53,7 @@ function App() {
           <Route path="/" element={<Layout />} />
         </Route>
       </Routes>
-    </>
+    </>*/
 
     /* GuestSidebar 
     <>
