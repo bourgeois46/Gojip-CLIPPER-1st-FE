@@ -33,13 +33,13 @@ function App() {
   });
 
   return (
-    /**/
+    /*
     <>
       <LoginPage />
       <Routes>
         <Route path="/" element={<Layout />}></Route>
       </Routes>
-    </>
+    </>*/
 
     /* UserSidebar
     <>
@@ -55,7 +55,7 @@ function App() {
       </Routes>
     </>*/
 
-    /* GuestSidebar 
+    /* GuestSidebar */
     <>
       <MainPage />
       <Routes>
@@ -64,7 +64,7 @@ function App() {
           <Route path="/" element={<Layout />} />
         </Route>
       </Routes>
-    </>*/
+    </>
   );
 }
 

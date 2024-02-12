@@ -6,8 +6,24 @@ import UserSidebar from "../UserSidebar/UserSidebar";
 import GuestSidebar from "../GuestSidebar/GuestSidebar";
 
 const Nav = () => {
+  const [show, setShow] = useState(false);
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const sidebarRef = useRef(null);
+
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      //console.log("window.scrollY", window.scrollY);
+      if (window.scrollY > 50) {
+        setShow(true);
+      } else {
+        setShow(false);
+      }
+    });
+
+    return () => {
+      window.removeEventListener("scroll", () => {});
+    };
+  }, []);
 
   useEffect(() => {
     // 외부를 클릭했을 때 사이드바가 열려있으면 닫기
@@ -28,16 +44,26 @@ const Nav = () => {
   };
 
   return (
-    <div className="nav-box">
-      <div className="go-home">Go집</div>
-      <hr className="bottom-line" />
-      <img src={homeyellow} alt="HomeYellow" className="homeyellow-icon" />
-      <img
-        src={sidebarbutton}
-        alt="SidebarButton"
-        className="sidebarbutton-icon"
-        onClick={handleSidebarButtonClick}
-      />
+    <>
+      <nav className={`nav ${show && "nav-white"} `}>
+        <div className="go-home" onClick={() => (window.location.href = "/")}>
+          Go집
+        </div>
+        <hr className="bottom-line" />
+        <img
+          src={homeyellow}
+          alt="HomeYellow"
+          className="homeyellow-icon"
+          onClick={() => (window.location.href = "/")}
+        />
+        <img
+          src={sidebarbutton}
+          alt="SidebarButton"
+          className="sidebarbutton-icon"
+          onClick={handleSidebarButtonClick}
+        />
+      </nav>
+
       {/*사용자 정보 따라서 조건문 수정}*/}
       {/*{isSidebarOpen && (
         <div ref={sidebarRef}>
@@ -50,7 +76,7 @@ const Nav = () => {
           <GuestSidebar />
         </div>
       )}
-    </div>
+    </>
   );
 };
 
