@@ -5,7 +5,7 @@
   display: flex;
   flex-direction: column; /* 수직 방향으로 나열 */
   align-items: center; /* 수직 가운데 정렬 */
-  padding-top: 170px;
+  padding-top: 200px;
   overflow-y: auto;
 }
 
@@ -18,7 +18,7 @@
   display: block;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 120px; /* 이미지 사이 간격 조절 */
+  margin-bottom: 120px;
 }
 
 .main1 {
@@ -26,51 +26,4 @@
   margin-right: auto;
   margin-bottom: 70px;
   display: block;
-  animation: translateLeft 0.8s ease-in-out;
-}
-
-.main2 {
-  animation: translateRight 0.8s ease-in-out 1s;
-}
-
-.main3 {
-  animation: translateLeft 0.8s ease-in-out 2s;
-}
-
-.main4 {
-  animation: translateRight 0.8s ease-in-out 3s;
-}
-
-.main5 {
-  animation: translateLeft 0.8s ease-in-out 4s;
-}
-
-.main6 {
-  animation: translateRight 0.8s ease-in-out 5s;
-}
-
-.main7 {
-  animation: translateLeft 0.8s ease-in-out 6s;
-}
-
-@keyframes translateLeft {
-  from {
-    transform: translateX(-100px);
-    opacity: 0;
-  }
-  to {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
-
-@keyframes translateRight {
-  from {
-    transform: translateX(100px);
-    opacity: 0;
-  }
-  to {
-    transform: translateX(0);
-    opacity: 1;
-  }
 }
