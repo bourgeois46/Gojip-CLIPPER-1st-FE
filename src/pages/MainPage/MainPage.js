@@ -27,10 +27,10 @@ const MainPage = () => {
       <Fade top delay={2500}>
         <img src={main5} alt="main-5" className="main5" />
       </Fade>
-      <Fade top delay={0}>
+      <Fade top delay={300}>
         <img src={main6} alt="main-6" className="main6" />
       </Fade>
-      <Fade top delay={500}>
+      <Fade top delay={700}>
         <img src={main7} alt="main-7" className="main7" />
       </Fade>
     </div>
