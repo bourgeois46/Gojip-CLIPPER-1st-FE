@@ -2,7 +2,6 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import "./GuestSidebar.css";
 import GuestSidebarItem from "./GuestSidebarItem.js";
-import Footer from "../Footer/Footer.js";
 import loginbutton from "../../assets/images/loginButton.png";
 
 function GuestSidebar() {
@@ -23,7 +22,6 @@ function GuestSidebar() {
                 key={id}
                 exact
                 style={{ color: "black", textDecoration: "none" }}
-                //activeStyle={{ color: "black" }}
               >
                 <GuestSidebarItem menu={menu} />
               </NavLink>

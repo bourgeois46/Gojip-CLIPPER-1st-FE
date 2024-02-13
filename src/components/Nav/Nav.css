@@ -1,3 +1,21 @@
+.nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 30px;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background-color ease-in;
+}
+
+.nav-white {
+  background-color: white;
+  width: 400px;
+  height: 130px;
+}
+
 .go-home {
   position: absolute;
   margin-left: 17px;
@@ -5,7 +23,6 @@
   top: 80px;
   display: flex;
   color: #333333;
-
   font-family: "Inter";
   font-style: normal;
   font-size: 2em;
@@ -33,4 +50,5 @@
   margin-left: 340px;
   width: 30px;
   top: 90px;
+  z-index: 1;
 }

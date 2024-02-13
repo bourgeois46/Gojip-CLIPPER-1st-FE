@@ -7,7 +7,6 @@ import Nav from "../../components/Nav/Nav";
 const LoginPage = () => {
   return (
     <div className="login-page">
-      <Nav />
       <div className="logintext-container">
         <img src={logintext} alt="logintext" />
       </div>

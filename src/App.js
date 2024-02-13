@@ -6,6 +6,7 @@ import GuestSidebar from "./components/GuestSidebar/GuestSidebar";
 import { BrowserRouter, Routes, Route, Outlet } from "react-router-dom";
 import Nav from "./components/Nav/Nav";
 import Footer from "./components/Footer/Footer";
+import RecordPage from "./pages/RecordPage/RecordPage";
 
 const Layout = () => {
   return (
@@ -32,28 +33,36 @@ function App() {
   });
 
   return (
-    /* <LoginPage />*/
+    /*
+    <>
+      <LoginPage />
+      <Routes>
+        <Route path="/" element={<Layout />}></Route>
+      </Routes>
+    </>*/
 
     /* UserSidebar
     <>
       <MainPage />
-          <UserSidebar />
-          <Routes>
-            <Route path="/" element={<Layout />} />
-            <Route path="/" element={<Layout />} />
-            <Route path="/" element={<Layout />} />
-            <Route path="/" element={<Layout />} />
-            <Route path="/" element={<Layout />} />
-          </Routes> 
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route path="index" element={<RecordPage />} />
+          <Route path="/" element={<Layout />} />
+          <Route path="/" element={<Layout />} />
+          <Route path="/" element={<Layout />} />
+          <Route path="/" element={<Layout />} />
+        </Route>
+      </Routes>
     </>*/
 
     /* GuestSidebar */
     <>
       <MainPage />
       <Routes>
-        <Route path="/" element={<Layout />} />
-        <Route path="/" element={<Layout />} />
-        <Route path="/" element={<Layout />} />
+        <Route path="/" element={<Layout />}>
+          <Route path="/" element={<Layout />} />
+          <Route path="/" element={<Layout />} />
+        </Route>
       </Routes>
     </>
   );
