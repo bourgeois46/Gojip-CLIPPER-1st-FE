@@ -2,7 +2,6 @@ import React from "react";
 import "./LoginPage.css";
 import logintext from "../../assets/images/loginText.png";
 import loginbutton from "../../assets/images/loginButton.png";
-import Nav from "../../components/Nav/Nav";
 
 const LoginPage = () => {
   return (

@@ -6,7 +6,7 @@
 .usersidebar {
   height: 945px;
   position: absolute;
-  top: -1113px; /* 사이드바 위치조절*/
+  top: -910px; /* 사이드바 위치조절*/
   left: 120px;
   width: 280px;
   background-image: linear-gradient(to bottom, #ffffff 50%, #f3f3f3 50%);
