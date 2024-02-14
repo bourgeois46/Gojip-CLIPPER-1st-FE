@@ -65,17 +65,17 @@ const Nav = () => {
       </nav>
 
       {/*사용자 정보 따라서 조건문 수정}*/}
-      {/*{isSidebarOpen && (
+      {isSidebarOpen && (
         <div ref={sidebarRef}>
           <UserSidebar />
         </div>
-      )}*/}
+      )}
 
-      {isSidebarOpen && (
+      {/*{isSidebarOpen && (
         <div ref={sidebarRef}>
           <GuestSidebar />
         </div>
-      )}
+      )}*/}
     </>
   );
 };

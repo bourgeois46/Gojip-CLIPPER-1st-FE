@@ -7,6 +7,7 @@ import { BrowserRouter, Routes, Route, Outlet } from "react-router-dom";
 import Nav from "./components/Nav/Nav";
 import Footer from "./components/Footer/Footer";
 import RecordPage from "./pages/RecordPage/RecordPage";
+import ViewRecordPage from "./pages/ViewRecordPage/ViewRecordPage";
 
 const Layout = () => {
   return (
@@ -33,14 +34,22 @@ function App() {
   });
 
   return (
-    /*
+    /**/
+    <>
+      <ViewRecordPage />
+      <Routes>
+        <Route path="/" element={<Layout />}></Route>
+      </Routes>
+    </>
+
+    /* 
     <>
       <LoginPage />
       <Routes>
         <Route path="/" element={<Layout />}></Route>
       </Routes>
-    </>*/
-
+    </>
+*/
     /* UserSidebar
     <>
       <MainPage />
@@ -53,9 +62,9 @@ function App() {
           <Route path="/" element={<Layout />} />
         </Route>
       </Routes>
-    </>*/
-
-    /* GuestSidebar */
+    </>
+*/
+    /* GuestSidebar 
     <>
       <MainPage />
       <Routes>
@@ -64,7 +73,7 @@ function App() {
           <Route path="/" element={<Layout />} />
         </Route>
       </Routes>
-    </>
+    </>*/
   );
 }
 
