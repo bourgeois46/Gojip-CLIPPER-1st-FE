@@ -3,11 +3,12 @@ import MainPage from "./pages/MainPage/MainPage";
 import LoginPage from "./pages/LoginPage/LoginPage";
 import UserSidebar from "./components/UserSidebar/UserSidebar";
 import GuestSidebar from "./components/GuestSidebar/GuestSidebar";
-import { BrowserRouter, Routes, Route, Outlet } from "react-router-dom";
+import { Routes, Route, Outlet } from "react-router-dom";
 import Nav from "./components/Nav/Nav";
 import Footer from "./components/Footer/Footer";
 import RecordPage from "./pages/RecordPage/RecordPage";
 import ViewRecordPage from "./pages/ViewRecordPage/ViewRecordPage";
+import MyPage from "./pages/MyPage/MyPage";
 
 const Layout = () => {
   return (
@@ -38,7 +39,11 @@ function App() {
     <>
       <ViewRecordPage />
       <Routes>
-        <Route path="/" element={<Layout />}></Route>
+        <Route path="/" element={<Layout />}>
+          <Route path="/record" element={<RecordPage />} />
+          <Route path="/view" element={<ViewRecordPage />} />
+          <Route path="/mypage" element={<MyPage />} />
+        </Route>
       </Routes>
     </>
 
@@ -46,7 +51,12 @@ function App() {
     <>
       <LoginPage />
       <Routes>
-        <Route path="/" element={<Layout />}></Route>
+        <Route path="/" element={<Layout />}>
+          <Route path="/record" element={<RecordPage />} />
+          <Route path="/view" element={<ViewRecordPage />} />
+          <Route path="/mypage" element={<MyPage />} />
+          <Route path="/login" element={<LoginPage />} />
+        </Route>
       </Routes>
     </>
 */
@@ -54,16 +64,15 @@ function App() {
     <>
       <MainPage />
       <Routes>
-        <Route path="/" element={<Layout />}>
-          <Route path="index" element={<RecordPage />} />
-          <Route path="/" element={<Layout />} />
-          <Route path="/" element={<Layout />} />
-          <Route path="/" element={<Layout />} />
-          <Route path="/" element={<Layout />} />
+        <Route path="/" element={<MainPage />}>
+          <Route path="/record" element={<RecordPage />} />
+          <Route path="/view" element={<ViewRecordPage />} />
+          <Route path="/mypage" element={<MyPage />} />
+           <Route path="/login" element={<LoginPage />} />
         </Route>
       </Routes>
     </>
-*/
+
     /* GuestSidebar 
     <>
       <MainPage />
@@ -71,9 +80,11 @@ function App() {
         <Route path="/" element={<Layout />}>
           <Route path="/" element={<Layout />} />
           <Route path="/" element={<Layout />} />
+          <Route path="/login" element={<LoginPage />} />
         </Route>
       </Routes>
-    </>*/
+    </>
+    */
   );
 }
 

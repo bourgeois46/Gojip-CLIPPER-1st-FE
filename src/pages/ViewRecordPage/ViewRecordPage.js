@@ -39,12 +39,14 @@ function ViewRecordPage() {
   }, []);
 
   return (
-    <div className="record-page">
-      <div className="text">기록 보기</div>
-      <div className="map-container">
-        <div id="map" className="map" />
+    <>
+      <div className="record-page">
+        <div className="text">기록 보기</div>
+        <div className="map-container">
+          <div id="map" className="map" />
+        </div>
       </div>
-    </div>
+    </>
   );
 }
 
