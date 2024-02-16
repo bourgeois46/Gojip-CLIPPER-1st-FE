@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import "./ViewRecordPage.css";
+import BottomSheet from "../../components/BottomSheet/BottomSheet";
 
 function ViewRecordPage() {
   // 스크립트 파일 읽어오기
@@ -44,6 +45,7 @@ function ViewRecordPage() {
         <div className="text">기록 보기</div>
         <div className="map-container">
           <div id="map" className="map" />
+          <BottomSheet />
         </div>
       </div>
     </>
