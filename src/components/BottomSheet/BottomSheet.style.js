@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { BOTTOM_SHEET_HEIGHT } from "../../constants";
 import { BOTTOM_SHEET_WIDTH } from "../../constants";
 
@@ -42,4 +42,118 @@ const ContentWrapper = styled.div`
   padding: 10px;
 `;
 
-export { Wrapper, HeaderWrapper, HandleBar, ContentWrapper };
+const Gu = styled.div`
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 25px;
+  font-style: Inter;
+  font-weight: bold;
+  text-align: center;
+  background-color: #ffef64;
+  width: 100px;
+`;
+
+const Line = styled.div`
+  position: absolute;
+  border: none;
+  border-top: 1px solid #ccc;
+  top: 120px;
+  width: 400px;
+  left: 0;
+
+  ${({ top }) =>
+    top &&
+    css`
+      top: ${top}px;
+    `}
+`;
+
+const FilterContainer = styled.div`
+  justify-content: space-between;
+`;
+
+const SetFilter = styled.div`
+  position: absolute;
+  font-style: Inter;
+  font-weight: bold;
+  top: 125px;
+`;
+
+const ViewEntire = styled.div`
+  position: absolute;
+  font-style: Inter;
+  top: 125px;
+  left: 125px;
+  cursor: pointer;
+
+  ${({ left }) =>
+    left &&
+    css`
+      left: ${left}px;
+    `}
+
+  ${({ boldClicked }) =>
+    boldClicked &&
+    css`
+      font-weight: bold;
+    `}
+`;
+
+const ViewCollection = styled.div`
+  position: absolute;
+  font-style: Inter;
+  top: 125px;
+  left: 125px;
+  cursor: pointer;
+
+  ${({ left }) =>
+    left &&
+    css`
+      left: ${left}px;
+    `}
+
+  ${({ boldClicked }) =>
+    boldClicked &&
+    css`
+      font-weight: bold;
+    `}
+`;
+
+const HouseInfo = styled.div`
+  width: 400px;
+  height: 150px;
+  margin-top: 50px;
+  top: 50px;
+`;
+
+const Image = styled.img`
+  margin-top: 20px;
+  height: auto;
+`;
+
+const TextInfoContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+const TextInfo = styled.div`
+  position: relative;
+  top: -90px;
+  left: 150px;
+`;
+
+export {
+  Wrapper,
+  HeaderWrapper,
+  HandleBar,
+  ContentWrapper,
+  Gu,
+  Line,
+  FilterContainer,
+  SetFilter,
+  HouseInfo,
+  Image,
+  TextInfo,
+  TextInfoContainer,
+  ViewCollection,
+  ViewEntire,
+};

@@ -45,7 +45,7 @@ function ViewRecordPage() {
         <div className="text">기록 보기</div>
         <div className="map-container">
           <div id="map" className="map" />
-          <BottomSheet></BottomSheet>
+          <BottomSheet />
         </div>
       </div>
     </>
