@@ -15,7 +15,7 @@ const useBottomSheet = () => {
     const shouldEnlarge = info?.y < 0; // 위로  드래그했을 때 모달 크기 늘림
 
     if (shouldEnlarge) {
-      // 모달 크기 늘림
+      // 모달을 위쪽으로 이동
       controls.start({
         y: -500,
       });
@@ -23,9 +23,10 @@ const useBottomSheet = () => {
   };
 
   useEffect(() => {
-    if (prevIsOpen && !isOpen) {
+    /*if (prevIsOpen && !isOpen) { // 모달 닫는 기능
       controls.start("hidden");
-    } else if (!prevIsOpen && isOpen) {
+    }*/
+    if (!prevIsOpen && isOpen) {
       controls.start("visible");
     }
   }, [controls, isOpen, prevIsOpen]);

@@ -5,27 +5,27 @@ import Header from "./Header";
 import { useMotionValue, useTransform } from "framer-motion";
 import roompic from "../../assets/images/room-pic.png";
 import { useState } from "react";
+import CollectionModal from "../Modal/CollectionModal";
 
 const BottomSheet = ({ children }) => {
   const { onDragEnd, controls } = useBottomSheet();
   const dragY = useMotionValue(0); // 모달의 y 위치를 추적
-  const [boldClickedViewEntire, setBoldClickedViewEntire] = useState(false);
-  const [boldClickedViewCollection, setBoldClickedViewCollection] =
-    useState(false);
+  const [clickedViewEntire, setClickedViewEntire] = useState(true);
+  const [clickedViewCollection, setClickedViewCollection] = useState(false);
   const [showCollectionModal, setShowCollectionModal] = useState(false);
 
   // 모달을 위로 드래그할 때 모달의 높이를 동적으로 조절
   const height = useTransform(dragY, [0, -100], [200, "100vh"]);
 
   const handleViewEntireClick = () => {
-    setBoldClickedViewEntire(true);
-    setBoldClickedViewCollection(false);
+    setClickedViewEntire(true);
+    setClickedViewCollection(false);
   };
 
   const handleViewCollectionClick = () => {
-    setBoldClickedViewEntire(false);
-    setBoldClickedViewCollection(true);
-    setShowCollectionModal(true);
+    setClickedViewEntire(false);
+    setClickedViewCollection(true);
+    setShowCollectionModal(true); // 컬렉션 보기 모달
   };
 
   return (
@@ -57,13 +57,13 @@ const BottomSheet = ({ children }) => {
         <S.FilterContainer>
           <S.SetFilter>필터 설정</S.SetFilter>
           <S.ViewEntire
-            boldClicked={boldClickedViewEntire}
+            clicked={clickedViewEntire}
             onClick={handleViewEntireClick}
           >
             전체기록보기
           </S.ViewEntire>
           <S.ViewCollection
-            boldClicked={boldClickedViewCollection}
+            clicked={clickedViewCollection}
             left={250}
             onClick={handleViewCollectionClick}
           >
@@ -73,11 +73,7 @@ const BottomSheet = ({ children }) => {
         </S.FilterContainer>
 
         <S.HouseInfo>
-          <S.Image
-            src={roompic}
-            alt="roompic"
-            //onClick={}
-          />
+          <S.Image src={roompic} alt="roompic" />
           <S.TextInfoContainer>
             <S.TextInfo>이름</S.TextInfo>
             <S.TextInfo>월세</S.TextInfo>
@@ -87,11 +83,7 @@ const BottomSheet = ({ children }) => {
         </S.HouseInfo>
 
         <S.HouseInfo>
-          <S.Image
-            src={roompic}
-            alt="roompic"
-            //onClick={}
-          />
+          <S.Image src={roompic} alt="roompic" />
           <S.TextInfoContainer>
             <S.TextInfo>이름</S.TextInfo>
             <S.TextInfo>월세</S.TextInfo>
@@ -100,6 +92,9 @@ const BottomSheet = ({ children }) => {
           <S.Line top={320} />
         </S.HouseInfo>
       </S.ContentWrapper>
+      {showCollectionModal && (
+        <CollectionModal onClose={handleViewCollectionClick} />
+      )}
     </S.Wrapper>
   );
 };
