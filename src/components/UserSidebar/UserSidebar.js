@@ -26,7 +26,6 @@ const UserSidebar = () => {
                 to={menu.path}
                 key={index}
                 style={{ color: "black", textDecoration: "none" }}
-                //activeStyle={{ color: "black" }}
               >
                 <UserSidebarItem menu={menu} />
               </NavLink>

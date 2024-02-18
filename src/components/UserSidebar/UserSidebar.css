@@ -14,6 +14,7 @@
   align-items: center;
   z-index: 1;
   overflow: visible;
+  box-shadow: -125px -5px 10px rgba(0, 0, 0, 0.4);
 }
 
 .img-container {

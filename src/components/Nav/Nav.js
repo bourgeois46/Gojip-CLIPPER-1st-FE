@@ -12,7 +12,6 @@ const Nav = () => {
 
   useEffect(() => {
     window.addEventListener("scroll", () => {
-      //console.log("window.scrollY", window.scrollY);
       if (window.scrollY > 50) {
         setShow(true);
       } else {
@@ -21,6 +20,7 @@ const Nav = () => {
     });
 
     return () => {
+      // cleanup 이전에 등록된 이벤트 리스터 제거
       window.removeEventListener("scroll", () => {});
     };
   }, []);
@@ -34,6 +34,7 @@ const Nav = () => {
     }
 
     document.addEventListener("mousedown", handleClickOutside);
+
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
@@ -65,17 +66,17 @@ const Nav = () => {
       </nav>
 
       {/*사용자 정보 따라서 조건문 수정}*/}
-      {isSidebarOpen && (
+      {/*{isSidebarOpen && (
         <div ref={sidebarRef}>
           <UserSidebar />
         </div>
-      )}
+      )}*/}
 
-      {/*{isSidebarOpen && (
+      {isSidebarOpen && (
         <div ref={sidebarRef}>
           <GuestSidebar />
         </div>
-      )}*/}
+      )}
     </>
   );
 };

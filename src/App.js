@@ -21,11 +21,6 @@ const Layout = () => {
 };
 
 function App() {
-  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
-  const handleSidebarButtonClick = () => {
-    setIsSidebarOpen(!isSidebarOpen);
-  };
-
   function setScreenSize() {
     let vh = window.innerHeight * 0.01;
     document.documentElement.style.setProperty("--vh", `${vh}px`);
@@ -35,7 +30,7 @@ function App() {
   });
 
   return (
-    /**/
+    /*
     <>
       <ViewRecordPage />
       <Routes>
@@ -46,7 +41,7 @@ function App() {
         </Route>
       </Routes>
     </>
-
+*/
     /* 
     <>
       <LoginPage />
@@ -64,16 +59,16 @@ function App() {
     <>
       <MainPage />
       <Routes>
-        <Route path="/" element={<MainPage />}>
+        <Route path="/" element={<Layout />}>
           <Route path="/record" element={<RecordPage />} />
           <Route path="/view" element={<ViewRecordPage />} />
           <Route path="/mypage" element={<MyPage />} />
-           <Route path="/login" element={<LoginPage />} />
+          <Route path="/login" element={<LoginPage />} />
         </Route>
       </Routes>
     </>
-
-    /* GuestSidebar 
+*/
+    /* GuestSidebar */
     <>
       <MainPage />
       <Routes>
@@ -84,7 +79,6 @@ function App() {
         </Route>
       </Routes>
     </>
-    */
   );
 }
 
