@@ -92,8 +92,8 @@ const ViewEntire = styled.div`
       left: ${left}px;
     `}
 
-  ${({ boldClicked }) =>
-    boldClicked &&
+  ${({ clicked }) =>
+    clicked &&
     css`
       font-weight: bold;
     `}
