@@ -2,7 +2,7 @@ import React from "react";
 import styled, { css } from "styled-components";
 
 const ModalOverlay = styled.div`
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
@@ -19,8 +19,8 @@ const ModalContent = styled.div`
   padding: 20px;
   border-radius: 14px;
   width: 260px;
-  margin-top: -420px;
   z-index: 101;
+  margin-top: -200px;
 `;
 
 const CollectionOptions = styled.div`

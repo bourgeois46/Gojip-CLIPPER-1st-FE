@@ -20,7 +20,7 @@
   position: absolute;
   margin-left: 17px;
   width: 420px;
-  top: 80px;
+  top: 50px;
   display: flex;
   color: #333333;
   font-family: "Inter";
@@ -33,7 +33,7 @@
   position: absolute;
   border: none;
   border-top: 1px solid #ccc;
-  top: 120px;
+  top: 95px;
   width: 400px;
 }
 
@@ -42,13 +42,13 @@
   margin-right: 100px;
   margin-left: 105px;
   width: 35px;
-  top: 83px;
+  top: 55px;
 }
 
 .sidebarbutton-icon {
   position: absolute;
   margin-left: 340px;
   width: 30px;
-  top: 90px;
+  top: 60px;
   z-index: 1;
 }
