@@ -4,17 +4,26 @@
 }
 
 .usersidebar {
-  height: 945px;
+  height: 975px;
   position: absolute;
-  top: -910px; /* 사이드바 위치조절*/
+  top: 0px;
   left: 120px;
   width: 280px;
   background-image: linear-gradient(to bottom, #ffffff 50%, #f3f3f3 50%);
-  //opacity: 0.5;
   align-items: center;
-  z-index: 1;
+  z-index: 10;
   overflow: visible;
-  box-shadow: -125px -5px 10px rgba(0, 0, 0, 0.4);
+  box-shadow: -125px -50px 95px rgba(0, 0, 0, 0.4);
+  animation: slide 0.7s ease-in-out;
+}
+
+@keyframes slide {
+  from {
+    transform: translate(100%);
+  }
+  to {
+    right: 0;
+  }
 }
 
 .img-container {

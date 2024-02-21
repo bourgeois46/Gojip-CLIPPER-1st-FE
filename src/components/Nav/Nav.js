@@ -10,6 +10,10 @@ const Nav = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const sidebarRef = useRef(null);
 
+  const handleSidebarButtonClick = () => {
+    setIsSidebarOpen(true);
+  };
+
   useEffect(() => {
     window.addEventListener("scroll", () => {
       if (window.scrollY > 50) {
@@ -20,7 +24,6 @@ const Nav = () => {
     });
 
     return () => {
-      // cleanup 이전에 등록된 이벤트 리스터 제거
       window.removeEventListener("scroll", () => {});
     };
   }, []);
@@ -39,10 +42,6 @@ const Nav = () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
   }, []);
-
-  const handleSidebarButtonClick = () => {
-    setIsSidebarOpen(!isSidebarOpen);
-  };
 
   return (
     <>
@@ -68,13 +67,13 @@ const Nav = () => {
       {/*사용자 정보 따라서 조건문 수정}*/}
       {/*{isSidebarOpen && (
         <div ref={sidebarRef}>
-          <UserSidebar />
+          <UserSidebar setIsSidebarOpen={setIsSidebarOpen} />
         </div>
       )}*/}
 
       {isSidebarOpen && (
         <div ref={sidebarRef}>
-          <GuestSidebar />
+          <GuestSidebar setIsSidebarOpen={setIsSidebarOpen} />
         </div>
       )}
     </>

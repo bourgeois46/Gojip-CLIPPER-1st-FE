@@ -1,23 +1,23 @@
 .recordPage {
-    min-height: 100vh;
-    background-color: white;
+  min-height: 100vh;
+  background-color: white;
 }
 
-.place-yellow{
-    height: 60.46px;
-    width: 345.03px;
-    background-color: #FFEF64; 
-    color: black; 
-    font-size: 18px;
-    text-align: center;
-    margin-top: 20px;
-    margin-left: 23px;
-    margin-right: 22px;
-    border: none; 
-    border-radius: 65.72px; 
-    font-weight: bold; 
-    cursor: pointer; 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.place-yellow {
+  height: 60.46px;
+  width: 345.03px;
+  background-color: #ffef64;
+  color: black;
+  font-size: 18px;
+  text-align: center;
+  margin-top: 20px;
+  margin-left: 23px;
+  margin-right: 22px;
+  border: none;
+  border-radius: 65.72px;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
