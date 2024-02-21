@@ -2,7 +2,7 @@ import React from "react";
 
 function GuestSidebarItem({ menu }) {
   return (
-    <div className="Guestsidebar-item">
+    <div>
       <p>{menu.name}</p>
     </div>
   );

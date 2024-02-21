@@ -1,0 +1,4 @@
+const BOTTOM_SHEET_HEIGHT = window.innerHeight;
+const BOTTOM_SHEET_WIDTH = 395;
+
+export { BOTTOM_SHEET_HEIGHT, BOTTOM_SHEET_WIDTH };

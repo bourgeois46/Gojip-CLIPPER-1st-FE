@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React from "react";
 import { NavLink } from "react-router-dom";
 import "./UserSidebar.css";
 import UserSidebarItem from "./UserSidebarItem.js";
@@ -6,11 +6,11 @@ import sidelogo from "../../assets/images/sideLogo.png";
 
 const UserSidebar = () => {
   const menus = [
-    { name: "기록 하기", path: "/", id: 0 },
-    { name: "기록 보기", path: "/", id: 1 },
-    { name: "도움 받기", path: "/", id: 2 },
-    { name: "집구하는 팁", path: "/", id: 3 },
-    { name: "마이페이지", path: "/", id: 4 },
+    { name: "기록 하기", path: "/record" },
+    { name: "기록 보기", path: "/view" },
+    { name: "도움 받기", path: "/" },
+    { name: "집구하는 팁", path: "/" },
+    { name: "마이페이지", path: "/mypage" },
   ];
 
   return (
@@ -18,15 +18,13 @@ const UserSidebar = () => {
       <div className="usersidebar">
         <div className="img-container">
           <img src={sidelogo} alt="sidelogo" className="side-logo" />
-          {menus.map((menu, id) => {
+          {menus.map((menu, index) => {
             return (
               <NavLink
                 className="nav-link"
                 to={menu.path}
-                key={id}
-                exact
+                key={index}
                 style={{ color: "black", textDecoration: "none" }}
-                //activeStyle={{ color: "black" }}
               >
                 <UserSidebarItem menu={menu} />
               </NavLink>

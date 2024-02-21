@@ -1,3 +1,4 @@
+
 import React , { useState } from 'react';
 import Nav from '../../components/Nav/Nav';
 import './RecordPage.css';
@@ -7,12 +8,11 @@ import useOneCheckbox from '../../hooks/useOneCheckbox';
 import useCheckbox from '../../hooks/useCheckbox';
 import RoomBox from './Room/RoomBox';
 
+
 function RecordPage() {
-
-    const [isOneChecked, handleOneCheckboxChange] = useOneCheckbox();
-    const [isChecked, handleCheckboxChange] = useCheckbox();
-    const [iconChecked, handleIconCheck] = useOneCheckbox();
-
+  const [isOneChecked, handleOneCheckboxChange] = useOneCheckbox();
+  const [isChecked, handleCheckboxChange] = useCheckbox();
+  const [iconChecked, handleIconCheck] = useOneCheckbox();
 
     return (
         <div className='recordPage'>

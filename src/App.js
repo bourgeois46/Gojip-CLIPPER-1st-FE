@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react";
 import MainPage from "./pages/MainPage/MainPage";
 import LoginPage from "./pages/LoginPage/LoginPage";
-import UserSidebar from "./components/UserSidebar/UserSidebar";
-import GuestSidebar from "./components/GuestSidebar/GuestSidebar";
-import { BrowserRouter, Routes, Route, Outlet } from "react-router-dom";
+import { Routes, Route, Outlet } from "react-router-dom";
 import Nav from "./components/Nav/Nav";
 import Footer from "./components/Footer/Footer";
 import RecordPage from "./pages/RecordPage/RecordPage";
+import ViewRecordPage from "./pages/ViewRecordPage/ViewRecordPage";
+import MyPage from "./pages/MyPage/MyPage";
 
 const Layout = () => {
   return (
@@ -19,11 +19,6 @@ const Layout = () => {
 };
 
 function App() {
-  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
-  const handleSidebarButtonClick = () => {
-    setIsSidebarOpen(!isSidebarOpen);
-  };
-
   function setScreenSize() {
     let vh = window.innerHeight * 0.01;
     document.documentElement.style.setProperty("--vh", `${vh}px`);
@@ -33,27 +28,17 @@ function App() {
   });
 
   return (
-    /* <LoginPage />*/
-
-    /* UserSidebar
     <>
-      <MainPage />
-          <UserSidebar />
-          <Routes>
-            <Route path="/" element={<Layout />} />
-            <Route path="/" element={<Layout />} />
-            <Route path="/" element={<Layout />} />
-            <Route path="/" element={<Layout />} />
-            <Route path="/" element={<Layout />} />
-          </Routes> 
-    </>*/
-
-    /* GuestSidebar */
-    <RecordPage />
-    
-
-  
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route path="/" element={<MainPage />} />
+          <Route path="/record" element={<RecordPage />} />
+          <Route path="/view" element={<ViewRecordPage />} />
+          <Route path="/mypage" element={<MyPage />} />
+          <Route path="/login" element={<LoginPage />} />
+        </Route>
+      </Routes>
+    </>
   );
 }
-
 export default App;
