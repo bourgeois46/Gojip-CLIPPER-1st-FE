@@ -3,7 +3,7 @@ import * as S from "./BottomSheet.style";
 import Header from "./Header";
 import { useMotionValue, useTransform } from "framer-motion";
 import roompic from "../../assets/images/room-pic.png";
-import { useState, useRef, useEffect } from "react";
+import { useState } from "react";
 import CollectionModal from "../Modal/CollectionModal";
 
 const BottomSheet = ({ children }) => {
@@ -12,7 +12,6 @@ const BottomSheet = ({ children }) => {
   const [clickedViewEntire, setClickedViewEntire] = useState(true);
   const [clickedViewCollection, setClickedViewCollection] = useState(false);
   const [showCollectionModal, setShowCollectionModal] = useState(false);
-  const modalRef = useRef(null); // 모달의 ref 생성
 
   // 모달을 위로 드래그할 때 모달의 높이를 동적으로 조절
   const height = useTransform(dragY, [0, -100], [200, "100vh"]);
@@ -28,27 +27,11 @@ const BottomSheet = ({ children }) => {
     setShowCollectionModal(true); // 컬렉션 보기 모달
   };
 
-  useEffect(() => {
-    // 외부를 클릭했을 때 모달이 열려있으면 닫기
-    function handleClickOutside(event) {
-      if (modalRef.current && !modalRef.current.contains(event.target)) {
-        setShowCollectionModal(false);
-      }
-    }
-
-    document.addEventListener("mousedown", handleClickOutside);
-
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
-  }, []);
-
   return (
     <S.Wrapper
       drag="y"
       onDragEnd={(event, info) => {
         onDragEnd(event, info);
-        dragY.set(0); // 드래그가 끝나면 모달의 y 위치 초기화
       }}
       initial={{ y: 200 }}
       animate={controls}
@@ -58,7 +41,7 @@ const BottomSheet = ({ children }) => {
         stiffness: 400,
       }}
       variants={{
-        visible: { y: 0 }, // 전체 화면이 보여지도록
+        visible: { y: 0 },
       }}
       dragConstraints={{ top: 100, bottom: 0 }}
       dragElastic={0.2}
@@ -107,6 +90,7 @@ const BottomSheet = ({ children }) => {
           <S.Line top={320} />
         </S.HouseInfo>
       </S.ContentWrapper>
+
       {showCollectionModal && (
         <CollectionModal onClose={() => setShowCollectionModal(false)} />
       )}

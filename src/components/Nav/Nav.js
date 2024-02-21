@@ -64,7 +64,7 @@ const Nav = () => {
         />
       </nav>
 
-      {/*사용자 정보 따라서 조건문 수정}*/}
+      {/*로그인 유무 따라서 조건문 수정}*/}
       {/*{isSidebarOpen && (
         <div ref={sidebarRef}>
           <UserSidebar setIsSidebarOpen={setIsSidebarOpen} />
