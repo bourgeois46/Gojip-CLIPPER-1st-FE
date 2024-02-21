@@ -10,9 +10,12 @@ const Nav = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const sidebarRef = useRef(null);
 
+  const handleSidebarButtonClick = () => {
+    setIsSidebarOpen(true);
+  };
+
   useEffect(() => {
     window.addEventListener("scroll", () => {
-      //console.log("window.scrollY", window.scrollY);
       if (window.scrollY > 50) {
         setShow(true);
       } else {
@@ -34,14 +37,11 @@ const Nav = () => {
     }
 
     document.addEventListener("mousedown", handleClickOutside);
+
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
   }, []);
-
-  const handleSidebarButtonClick = () => {
-    setIsSidebarOpen(!isSidebarOpen);
-  };
 
   return (
     <>
@@ -64,18 +64,18 @@ const Nav = () => {
         />
       </nav>
 
-      {/*사용자 정보 따라서 조건문 수정}*/}
-      {isSidebarOpen && (
-        <div ref={sidebarRef}>
-          <UserSidebar />
-        </div>
-      )}
-
+      {/*로그인 유무 따라서 조건문 수정}*/}
       {/*{isSidebarOpen && (
         <div ref={sidebarRef}>
-          <GuestSidebar />
+          <UserSidebar setIsSidebarOpen={setIsSidebarOpen} />
         </div>
       )}*/}
+
+      {isSidebarOpen && (
+        <div ref={sidebarRef}>
+          <GuestSidebar setIsSidebarOpen={setIsSidebarOpen} />
+        </div>
+      )}
     </>
   );
 };

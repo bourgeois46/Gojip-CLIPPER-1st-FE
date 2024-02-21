@@ -1,4 +1,3 @@
-// 모달 구현
 import useBottomSheet from "../../hooks/useBottomSheet";
 import * as S from "./BottomSheet.style";
 import Header from "./Header";
@@ -33,7 +32,6 @@ const BottomSheet = ({ children }) => {
       drag="y"
       onDragEnd={(event, info) => {
         onDragEnd(event, info);
-        dragY.set(0); // 드래그가 끝나면 모달의 y 위치 초기화
       }}
       initial={{ y: 200 }}
       animate={controls}
@@ -43,7 +41,7 @@ const BottomSheet = ({ children }) => {
         stiffness: 400,
       }}
       variants={{
-        visible: { y: 0 }, // 전체 화면이 보여지도록
+        visible: { y: 0 },
       }}
       dragConstraints={{ top: 100, bottom: 0 }}
       dragElastic={0.2}
@@ -92,8 +90,9 @@ const BottomSheet = ({ children }) => {
           <S.Line top={320} />
         </S.HouseInfo>
       </S.ContentWrapper>
+
       {showCollectionModal && (
-        <CollectionModal onClose={handleViewCollectionClick} />
+        <CollectionModal onClose={() => setShowCollectionModal(false)} />
       )}
     </S.Wrapper>
   );

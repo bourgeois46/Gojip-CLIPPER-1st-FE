@@ -58,9 +58,10 @@ const Line = styled.div`
 const CollectionModal = ({ onClose }) => {
   const handleOverlayClick = (e) => {
     if (e.target === e.currentTarget) {
-      onClose();
+      onClose(); // 모달 닫기 이벤트 호출
     }
   };
+
   return (
     <ModalOverlay onClick={handleOverlayClick}>
       <ModalContent>

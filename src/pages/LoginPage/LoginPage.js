@@ -12,9 +12,7 @@ const LoginPage = () => {
       </div>
       <div className="loginorsignup">로그인/회원가입</div>
       <div className="loginbutton-container">
-        <Link to="/login">
-          <img src={loginbutton} alt="loginbutton" />
-        </Link>
+        <img src={loginbutton} alt="loginbutton" />
       </div>
     </div>
   );

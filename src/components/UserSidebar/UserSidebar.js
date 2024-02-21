@@ -6,7 +6,6 @@ import sidelogo from "../../assets/images/sideLogo.png";
 
 const UserSidebar = () => {
   const menus = [
-    // url 경로 설정
     { name: "기록 하기", path: "/record" },
     { name: "기록 보기", path: "/view" },
     { name: "도움 받기", path: "/" },
@@ -26,7 +25,6 @@ const UserSidebar = () => {
                 to={menu.path}
                 key={index}
                 style={{ color: "black", textDecoration: "none" }}
-                //activeStyle={{ color: "black" }}
               >
                 <UserSidebarItem menu={menu} />
               </NavLink>
