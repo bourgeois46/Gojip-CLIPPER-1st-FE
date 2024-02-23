@@ -6,13 +6,9 @@ export default function useOneCheckbox() {
     const handleOneCheckboxChange = (e) => {
         const { name } = e.target;
         setIsOneChecked(prevState => {
-            if (prevState[name]) {
-                // 체크박스가 이미 선택되어 있다면 원상태로 돌린다.
-                return { yes: false, no: false };
-            } else {
-                // 체크박스가 선택되지 않았다면 선택한 체크박스만 true로 설정한다.
-                return { yes: name === 'yes', no: name === 'no' };
-            }
+            const newState = prevState[name] ? { yes: false, no: false } : { yes: name === 'yes', no: name === 'no' };
+            console.log("New state:", newState); // 상태 변경 로깅
+            return newState;
         });
     };
 

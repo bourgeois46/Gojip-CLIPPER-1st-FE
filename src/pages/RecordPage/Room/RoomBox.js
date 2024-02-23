@@ -1,6 +1,8 @@
 import React from 'react';
 import './RoomBox.css';
 import Checkbox from '../../../components/CheckBox/Checkbox';
+import OneCheckbox from '../../../components/CheckBox/OneCheckBox';
+import useCheckBoxInitial from '../../../hooks/useCheckBoxInitial';
 
 const roomData1 = [
     {type: 0, name:"남향"},
@@ -16,6 +18,11 @@ const roomData2 = [
 
 
 function RoomBox({ isChecked, handleCheckboxChange }) {
+
+    const initialState = { ok1: false, ok2: false, ok3: false, ok4: false };
+    const [checkedItems, handleOneCheckboxChange] = useCheckBoxInitial(initialState);
+    
+
     return (
         <div className='room-box'>
         <div className="room-title">비용</div>
@@ -41,16 +48,16 @@ function RoomBox({ isChecked, handleCheckboxChange }) {
                     ))}
                 </div>
                 <div className="checkbox1">
-                    <Checkbox key={0} name='yes' checked={isChecked.yes} onChange={handleCheckboxChange} />
+                    <OneCheckbox key={0} name='ok1' checked={checkedItems['ok1']} onChange={handleOneCheckboxChange} />
                 </div>
                 <div className="checkbox2">
-                    <Checkbox key={1} name='yes' checked={isChecked.yes} onChange={handleCheckboxChange} />
+                    <OneCheckbox key={1} name='ok2' checked={checkedItems['ok2']} onChange={handleOneCheckboxChange} />
                 </div>
                 <div className="checkbox3">
-                    <Checkbox key={2} name='yes' checked={isChecked.yes} onChange={handleCheckboxChange} />
+                    <OneCheckbox key={2} name='ok3' checked={checkedItems['ok3']} onChange={handleOneCheckboxChange} />
                 </div>
                 <div className="checkbox4">
-                    <Checkbox key={3} name='yes' checked={isChecked.yes} onChange={handleCheckboxChange} />
+                    <OneCheckbox key={3} name='ok4' checked={checkedItems['ok4']} onChange={handleOneCheckboxChange} />
                 </div>
             </div>
         </div>
