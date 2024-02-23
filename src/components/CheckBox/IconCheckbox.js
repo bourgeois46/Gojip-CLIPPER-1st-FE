@@ -5,10 +5,13 @@ import icon_bad from "../../assets/images/icon_bad.png";
 
 
 function IconCheckbox({name, type, isChecked, onChange}) {
-
+    const handleChange = (e) => {
+        console.log("IconCheckbox clicked!", e); // 이벤트 로깅
+        onChange(e);
+    };
     return (
         <CheckboxWrapper>
-            <CheckboxInput type="checkbox" id={type} name={name} onChange={onChange} checked={isChecked} />
+            <CheckboxInput type="checkbox" id={type} name={name} onChange={handleChange} checked={isChecked} />
             <CheckboxLabel htmlFor={type} isChecked={isChecked} type={type}>
                 {isChecked ? (
                     <CheckedIcon src={type === 'good' ? icon_good : icon_bad} alt={`${type}_icon`} />

@@ -1,0 +1,93 @@
+.room-box{
+    margin-top: 99.72px;
+    padding-bottom: 10px;
+}
+
+.room-title{
+    font-size: 15.77px;
+    font-weight: bold;
+    margin-left: 17.63px;
+}
+
+.room-item-row{
+    display: flex;
+    flex-direction: row;
+}
+
+.room-details{
+    display: flex;
+    flex-direction: column;
+}
+
+.room-label-1{
+    margin-left: 30.67px;
+    font-size: 13.14px;
+    text-align: left;
+    margin-top: 29.69px;
+}
+.room-label-2{
+    margin-left: 30.67px;
+    font-size: 13.14px;
+    text-align: left;
+    margin-top: 37.46px;
+}
+.room-label-3{
+    margin-left: 30.67px;
+    font-size: 13.14px;
+    text-align: left;
+    margin-top: 37.46px;
+}
+.room-label-4{
+    margin-left: 30.67px;
+    font-size: 13.14px;
+    text-align: left;
+    margin-top: 37.46px;
+}
+.room-label-5{
+    margin-left: 30.67px;
+    font-size: 13.14px;
+    text-align: left;
+    margin-top: 37.46px;
+}
+.room-label-6{
+    margin-left: 30.67px;
+    font-size: 13.14px;
+    text-align: left;
+    margin-top: 37.46px;
+}
+
+.line-room{
+    width: 1px;
+    height: 344px;
+    background-color: #C8C8C8;
+    margin-left: 25.33px;
+    margin-right: 19px;
+    margin-top: 12.96px;
+}
+
+.room-item-down1{
+    display: flex;
+    flex-direction: row;
+    margin-top:17px;
+    gap:4px;
+}
+
+.room-item-down2{
+    display: flex;
+    flex-direction: row;
+    margin-top:14px;
+    gap:39px;
+}
+
+.checkbox1{
+    margin-top:18.3px;
+}
+.checkbox2{
+    margin-top:25.67px;
+}
+.checkbox3{
+    margin-top:26.73px;
+}
+.checkbox4{
+    margin-top:28.01px;
+}

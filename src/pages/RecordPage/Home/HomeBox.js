@@ -10,6 +10,7 @@ const homeData = [
     {type: 2, name:"방간소음"}
 ]
 function HomeBox({ isChecked, handleCheckboxChange, iconChecked, handleIconCheck }) {
+    
     return (
         <div className='home-box'>
             <div className='home-title'>집</div>
