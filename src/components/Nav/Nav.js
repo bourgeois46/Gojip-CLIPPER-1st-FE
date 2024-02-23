@@ -65,17 +65,17 @@ const Nav = () => {
       </nav>
 
       {/*로그인 유무 따라서 조건문 수정}*/}
-      {/*{isSidebarOpen && (
+      {isSidebarOpen && (
         <div ref={sidebarRef}>
           <UserSidebar setIsSidebarOpen={setIsSidebarOpen} />
         </div>
-      )}*/}
+      )}
 
-      {isSidebarOpen && (
+      {/*{isSidebarOpen && (
         <div ref={sidebarRef}>
           <GuestSidebar setIsSidebarOpen={setIsSidebarOpen} />
         </div>
-      )}
+      )}*/}
     </>
   );
 };
