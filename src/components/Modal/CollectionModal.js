@@ -20,7 +20,7 @@ const ModalContent = styled.div`
   border-radius: 14px;
   width: 260px;
   z-index: 101;
-  margin-top:-200px;
+  margin-top: -200px;
 `;
 
 const CollectionOptions = styled.div`

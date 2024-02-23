@@ -46,7 +46,7 @@ const BottomSheet = ({ children }) => {
       }}
       dragConstraints={{ top: 100, bottom: 0 }}
       dragElastic={0.2}
-      style={{ overflow: "visible" , height }} // 높이를 동적으로 조절
+      style={{ overflow: "visible", height }} // 높이를 동적으로 조절
     >
       <Header />
       <S.ContentWrapper>
