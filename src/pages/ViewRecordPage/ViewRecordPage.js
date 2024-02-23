@@ -33,26 +33,30 @@ function ViewRecordPage() {
           };
           const map = new kakao.maps.Map(mapContainer, options); // 맵생성
 
-          // 노란색 마커 이미지 URL
-          const yellowMarkerImageUrl = "../../assets/images/yellowMarker.png";
-          // 노란색 마커 이미지 생성
-          const yellowMarkerImage = new kakao.maps.MarkerImage(
-            yellowMarkerImageUrl,
-            new kakao.maps.Size(24, 35)
-          );
-
           // 마커 클러스터러 생성
           const clusterer = new kakao.maps.MarkerClusterer({
             map: map,
             averageCenter: true,
             minLevel: 10,
+            styles: [
+              {
+                width: "70px",
+                height: "70px",
+                background: "#FFEF64",
+                textAlign: "center",
+                lineHeight: "70px",
+                fontSize: "15px",
+                fontWeight: "bold",
+                borderRadius: "50%",
+                boxShadow: "0px 4px 6px rgba(0, 0, 0, 0.5)",
+              },
+            ],
           });
 
           // positions 배열에 있는 좌표들을 이용하여 마커를 생성하고 클러스터러에 추가
           positions.forEach((pos) => {
             const marker = new kakao.maps.Marker({
               position: new kakao.maps.LatLng(pos.lat, pos.lng),
-              image: yellowMarkerImage, // 노란색 마커 이미지 사용
             });
             clusterer.addMarker(marker);
           });

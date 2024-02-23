@@ -2,7 +2,6 @@ import React from "react";
 import "./LoginPage.css";
 import logintext from "../../assets/images/loginText.png";
 import loginbutton from "../../assets/images/loginButton.png";
-import { Link } from "react-router-dom";
 
 const LoginPage = () => {
   return (
