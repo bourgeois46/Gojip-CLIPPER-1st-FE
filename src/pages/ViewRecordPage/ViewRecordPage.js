@@ -3,6 +3,23 @@ import "./ViewRecordPage.css";
 import BottomSheet from "../../components/BottomSheet/BottomSheet";
 
 function ViewRecordPage() {
+
+  const getLatLng = (kakao, addr) => {
+    return new Promise((resolve, reject) => {
+      const geocoder = new kakao.maps.services.Geocoder();
+      geocoder.addressSearch(addr, function (result, status) {
+        if (status === kakao.maps.services.Status.OK) {
+          resolve({
+            lat: result[0].y,
+            lng: result[0].x,
+          });
+        } else {
+          reject(new Error('주소 검색 결과가 없습니다.'));
+        }
+      });
+    });
+  };
+  
   // 스크립트 파일 읽어오기
   const new_script = (src) => {
     return new Promise((resolve, reject) => {
@@ -18,7 +35,7 @@ function ViewRecordPage() {
     });
   };
 
-  useEffect(() => {
+  /*useEffect(() => {
     // 카카오맵 스크립트 읽어오기
     const my_script = new_script(
       "https://dapi.kakao.com/v2/maps/sdk.js?autoload=false&appkey=6607bd619f830fb2254f539c2c548f5d"
@@ -37,7 +54,30 @@ function ViewRecordPage() {
         const map = new kakao.maps.Map(mapContainer, options); // 맵생성
       });
     });
+  }, []);*/
+
+  useEffect(() => {
+    const my_script = new_script(
+      "https://dapi.kakao.com/v2/maps/sdk.js?autoload=false&appkey=6607bd619f830fb2254f539c2c548f5d"
+    );
+  
+    my_script.then(() => {
+      const kakao = window["kakao"];
+      kakao.maps.load(() => {
+        const mapContainer = document.getElementById("map");
+  
+        const lat = 37.56000302825312;
+        const lng = 126.97540593203321;
+  
+        const options = {
+          center: new kakao.maps.LatLng(lat, lng), // 좌표설정
+          level: 3,
+        };
+        const map = new kakao.maps.Map(mapContainer, options); // 맵생성
+      });
+    });
   }, []);
+  
 
   return (
     <>
@@ -53,3 +93,5 @@ function ViewRecordPage() {
 }
 
 export default ViewRecordPage;
+
+
