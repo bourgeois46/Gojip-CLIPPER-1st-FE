@@ -1,0 +1,77 @@
+.toilet-box {
+    margin-top: 62.31px;
+}
+
+.toilet-title {
+    font-size: 15.77px;
+    font-weight: bold;
+    margin-left: 17.63px;
+}
+
+.toilet-item-row{
+    display: flex;
+    flex-direction: row;
+}
+
+.toilet-details{
+    display: flex;
+    flex-direction: column;
+}
+
+.toilet-text1{
+    margin-left: 30.67px;
+    font-size: 13.14px;
+    text-align: left;
+    margin-top: 36.69px;
+}
+
+.toilet-text2{
+    margin-left: 30.67px;
+    font-size: 13.14px;
+    text-align: left;
+    margin-top: 44.46px;
+}
+
+.toilet-text3 {
+    margin-left: 30.67px;
+    font-size: 13.14px;
+    text-align: left;
+    margin-top: 44.46px;
+}
+
+.toilet-text4 {
+    margin-left: 30.67px;
+    font-size: 13.14px;
+    text-align: left;
+    margin-top: 44.46px;
+}
+
+.toilet-text5 {
+    margin-left: 30.67px;
+    font-size: 13.14px;
+    text-align: left;
+    margin-top: 44.46px;
+}
+
+.toilet-text6 {
+    margin-left: 30.67px;
+    font-size: 13.14px;
+    text-align: left;
+    margin-top: 44.46px;
+}
+
+.line-toilet {
+    width: 1px;
+    height: 378px;
+    background-color: #C8C8C8;
+    margin-left: 25.33px;
+    margin-right: 19px;
+    margin-top: 12.96px;
+}
+
+.toilet-item-icon {
+    display: flex;
+    flex-direction: row;
+    gap: 43.29px;
+    margin-top: 26.46px;
+}

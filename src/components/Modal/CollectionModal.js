@@ -56,6 +56,7 @@ const Line = styled.div`
 `;
 
 const CollectionModal = ({ onClose }) => {
+  console.log('CollectionModal rendered');
   const handleOverlayClick = (e) => {
     if (e.target === e.currentTarget) {
       onClose(); // 모달 닫기 이벤트 호출
