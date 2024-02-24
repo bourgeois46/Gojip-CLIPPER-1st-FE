@@ -7,6 +7,7 @@ import Footer from "./components/Footer/Footer";
 import RecordPage from "./pages/RecordPage/RecordPage";
 import ViewRecordPage from "./pages/ViewRecordPage/ViewRecordPage";
 import MyPage from "./pages/MyPage/MyPage";
+import RecordMapSearchPage from "./pages/RecordPage/RecordMapSearchPage";
 
 const Layout = () => {
   return (
@@ -32,10 +33,11 @@ function App() {
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route path="/" element={<MainPage />} />
-          <Route path="/record" element={<RecordPage />} />
+          <Route path="/record" element={<RecordMapSearchPage />} />
           <Route path="/view" element={<ViewRecordPage />} />
           <Route path="/mypage" element={<MyPage />} />
           <Route path="/login" element={<LoginPage />} />
+      
         </Route>
       </Routes>
     </>
