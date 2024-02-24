@@ -7,6 +7,7 @@ import ViewHome from './Home/ViewHome';
 import ViewRoom from './Room/ViewRoom';
 import ViewToilet from './Toilet/ViewToilet';
 import ViewOptions from './Options/ViewOptions';
+import ViewPlus from './Plus/ViewPlus';
 
 function ViewRecordDetailPage() {
     return (
@@ -22,6 +23,7 @@ function ViewRecordDetailPage() {
                 <ViewRoom/>
                 <ViewToilet/>
                 <ViewOptions/>
+                <ViewPlus/>
 
             </div>
 
