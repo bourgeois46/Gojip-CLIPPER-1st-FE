@@ -1,0 +1,33 @@
+.options-view{
+    margin-top: 52px;
+}
+
+.viewOptions-column{
+    display: flex;
+    flex-direction: column;
+}
+
+.viewOptions-title-in{
+    font-size: 15.77px;
+    font-weight: bold;
+    margin-left: 17.63px;
+}
+
+.viewOptions-detail-in{
+    font-size: 13.14px;
+    margin-left: 27px;
+    margin-top: 18px;
+}
+
+.viewOptions-title-out{
+    font-size: 15.77px;
+    font-weight: bold;
+    margin-left: 17.63px;
+    margin-top: 198px;
+}
+
+.viewOptions-detail-out{
+    font-size: 13.14px;
+    margin-left: 27px;
+    margin-top: 18px;
+}
