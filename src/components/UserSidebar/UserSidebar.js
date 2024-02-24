@@ -8,8 +8,6 @@ const UserSidebar = () => {
   const menus = [
     { name: "기록 하기", path: "/record" },
     { name: "기록 보기", path: "/view" },
-    { name: "도움 받기", path: "/" },
-    { name: "집구하는 팁", path: "/" },
     { name: "마이페이지", path: "/mypage" },
   ];
 
