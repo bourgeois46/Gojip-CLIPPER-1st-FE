@@ -5,6 +5,7 @@ import MapContainerDetail from '../../../components/map/MapContainerDetail';
 import ViewCharge from './Charge/ViewCharge';
 import ViewHome from './Home/ViewHome';
 import ViewRoom from './Room/ViewRoom';
+import ViewToilet from './Toilet/ViewToilet';
 
 function ViewRecordDetailPage() {
     return (
@@ -18,6 +19,7 @@ function ViewRecordDetailPage() {
                 <ViewCharge/>
                 <ViewHome/>
                 <ViewRoom/>
+                <ViewToilet/>
 
             </div>
 
