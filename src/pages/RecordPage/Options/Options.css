@@ -1,0 +1,31 @@
+.options-box{
+    margin-top: 99.72px;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.title-in {
+    font-size: 15.77px;
+    font-weight: bold;
+    margin-left: 17.63px;
+}
+
+.row-item{
+    flex-direction: row;
+    display: flex;
+    margin-top: 15px;
+    margin-left: 27px;
+    gap:22px;
+    align-items: center;
+}
+
+.title-out {
+    font-size: 15.77px;
+    font-weight: bold;
+    margin-left: 17.63px;
+    margin-top: 30px;
+}

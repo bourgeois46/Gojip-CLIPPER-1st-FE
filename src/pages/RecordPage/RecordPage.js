@@ -1,4 +1,3 @@
-
 import React , { useState } from 'react';
 
 import './RecordPage.css';
@@ -8,6 +7,7 @@ import useOneCheckbox from '../../hooks/useOneCheckbox';
 import useCheckbox from '../../hooks/useCheckbox';
 import RoomBox from './Room/RoomBox';
 import ToiletBox from './Toilet/ToiletBox';
+import OptionsBox from './Options/OptionsBox';
 
 
 function RecordPage() {
@@ -26,6 +26,7 @@ function RecordPage() {
             <HomeBox isChecked={isChecked} handleCheckboxChange={handleCheckboxChange} iconChecked={iconChecked} handleIconCheck={handleIconCheck}/>
             <RoomBox isChecked={isOneChecked} handleCheckboxChange={handleOneCheckboxChange} />
             <ToiletBox/>
+            <OptionsBox/>
         </div>
     );
 }
