@@ -9,6 +9,7 @@ import RoomBox from './Room/RoomBox';
 import ToiletBox from './Toilet/ToiletBox';
 import OptionsBox from './Options/OptionsBox';
 import PlusBox from './Plus/PlusBox';
+import ImageBox from './ImagePlus/ImageBox';
 
 
 function RecordPage() {
@@ -29,6 +30,7 @@ function RecordPage() {
             <ToiletBox/>
             <OptionsBox/>
             <PlusBox/>
+            <ImageBox/>
         </div>
     );
 }

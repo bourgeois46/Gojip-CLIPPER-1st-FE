@@ -1,0 +1,59 @@
+.image-box{
+    margin-top: 99.72px;
+}
+
+.column{
+    display: flex;
+    flex-direction: column;
+}
+
+.image-title{
+    font-size: 15.77px;
+    font-weight: bold;
+    margin-left: 17.63px;
+}
+
+.camera-img{
+    width: 97.26px;
+    height: 99.26px;
+    margin-top: 13.83px;
+    margin-left: 27.49px;
+}
+
+.selected{
+    margin-left: 27.49px;
+    width: 97.26px;
+    height: 99.26px;
+}
+
+.selected-view{
+    margin-top: 17px;
+}
+
+.selected-row{
+    display: flex;
+    flex-direction: row;
+}
+
+.selected-line{
+    width: 1px;
+    height: 97.26px;
+    background-color: #C8C8C8;
+    margin-left: 11.14px;
+    margin-right: 17.74px;
+}
+
+.selected-input{
+    width: 204.39px;
+    height: 89.26px;
+    padding: 5px;
+    font-size: 10.52px;
+    border: 0.66px solid #CCCCCC;
+    border-radius: 13.14px;
+}
+
+.delete-img{
+    width: 16.86px;
+    height: 15.75px;
+    margin-left: 6px;
+}
