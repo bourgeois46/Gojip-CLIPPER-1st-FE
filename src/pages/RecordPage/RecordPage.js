@@ -10,6 +10,7 @@ import ToiletBox from './Toilet/ToiletBox';
 import OptionsBox from './Options/OptionsBox';
 import PlusBox from './Plus/PlusBox';
 import ImageBox from './ImagePlus/ImageBox';
+import CollectionBox from './Collection/CollectionBox';
 
 
 function RecordPage() {
@@ -31,6 +32,7 @@ function RecordPage() {
             <OptionsBox/>
             <PlusBox/>
             <ImageBox/>
+            <CollectionBox/>
         </div>
     );
 }
