@@ -1,0 +1,40 @@
+.image-view{
+    margin-top: 29px;
+}
+
+.viewImage-column{
+    display: flex;
+    flex-direction: column;
+}
+
+.viewImage-title{
+    font-size: 15.77px;
+    font-weight: bold;
+    margin-left: 17.63px;
+}
+
+.viewImage-row{
+    display: flex;
+    flex-direction: row;
+    margin-top: 29px;
+}
+
+.viewImage-img{
+    width: 97.26px;
+    height: 99.26px;
+    margin-left: 21px;
+
+}
+
+.viewImage-line{
+    width: 1px;
+    height: 97.26px;
+    background-color: #C8C8C8;
+    margin-left: 12px;
+    margin-right: 12px;
+}
+
+.viewImage-detail{
+    font-size: 13.14px;
+    text-align: left;
+}
