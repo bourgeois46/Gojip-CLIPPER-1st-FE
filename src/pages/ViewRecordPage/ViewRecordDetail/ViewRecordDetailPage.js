@@ -9,6 +9,7 @@ import ViewToilet from './Toilet/ViewToilet';
 import ViewOptions from './Options/ViewOptions';
 import ViewPlus from './Plus/ViewPlus';
 import ViewImage from './Image/ViewImage';
+import ViewCollection from './Collection/ViewCollection';
 
 function ViewRecordDetailPage() {
     return (
@@ -26,6 +27,7 @@ function ViewRecordDetailPage() {
                 <ViewOptions/>
                 <ViewPlus/>
                 <ViewImage/>
+                <ViewCollection/>
 
             </div>
 
