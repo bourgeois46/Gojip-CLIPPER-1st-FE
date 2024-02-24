@@ -8,6 +8,7 @@ import useCheckbox from '../../hooks/useCheckbox';
 import RoomBox from './Room/RoomBox';
 import ToiletBox from './Toilet/ToiletBox';
 import OptionsBox from './Options/OptionsBox';
+import PlusBox from './Plus/PlusBox';
 
 
 function RecordPage() {
@@ -27,6 +28,7 @@ function RecordPage() {
             <RoomBox isChecked={isOneChecked} handleCheckboxChange={handleOneCheckboxChange} />
             <ToiletBox/>
             <OptionsBox/>
+            <PlusBox/>
         </div>
     );
 }
