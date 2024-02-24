@@ -3,6 +3,7 @@ import './ViewRecordDetailPage.css'
 import record_pre from '../../../assets/images/record_pre.png';
 import MapContainerDetail from '../../../components/map/MapContainerDetail';
 import ViewCharge from './Charge/ViewCharge';
+import ViewHome from './Home/ViewHome';
 
 function ViewRecordDetailPage() {
     return (
@@ -14,6 +15,7 @@ function ViewRecordDetailPage() {
                 <MapContainerDetail className='map-circle' searchPlace="강남역" />
 
                 <ViewCharge/>
+                <ViewHome/>
 
             </div>
 

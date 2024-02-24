@@ -1,0 +1,99 @@
+.home-view{
+    margin-top: 35px;
+}
+
+.viewHome-title{
+    font-size: 15.77px;
+    font-weight: bold;
+    margin-left: 17.63px;
+}
+
+.viewHome-item-row{
+    display: flex;
+    flex-direction: row;
+}
+
+.viewHome-details{
+    display: flex;
+    flex-direction: column;
+}
+
+.viewHome-text1{
+    margin-left: 30.67px;
+    font-size: 13.14px;
+    text-align: left;
+    margin-top: 29.69px;
+}
+.viewHome-text2{
+    margin-left: 30.67px;
+    font-size: 13.14px;
+    text-align: left;
+    margin-top: 37.46px;
+}
+.viewHome-text3{
+    margin-left: 30.67px;
+    font-size: 13.14px;
+    text-align: left;
+    margin-top: 37.46px;
+}
+.viewHome-text4{
+    margin-left: 30.67px;
+    font-size: 13.14px;
+    text-align: left;
+    margin-top: 37.46px;
+}
+
+.line-viewHome{
+    width: 1px;
+    height: 211px;
+    background-color: #C8C8C8;
+    margin-left: 25.33px;
+    margin-right: 19px;
+    margin-top: 12.96px;
+}
+
+.viewHome-item-row1{
+    display: flex;
+    flex-direction: row;
+    margin-top: 27px;
+}
+
+.viewHome_item1{
+    font-size: 13.14px;
+    font-weight: bold;
+}
+.viewHome_item2{
+    font-size: 13.14px;
+    font-weight: bold;
+}
+.viewHome_item3{
+    font-size: 13.14px;
+    font-weight: bold;
+}
+.viewHome_item4{
+    font-size: 13.14px;
+    font-weight: bold;
+}
+.viewHome_item5{
+    font-size: 13.14px;
+    font-weight: bold;
+}
+.viewHome_item6{
+    font-size: 13.14px;
+    font-weight: bold;
+    margin-top: 37px;
+}
+
+.viewHome_img{
+
+    width: 36px;
+    height: 36px;
+    margin-top: 33px;
+}
+
+.viewHome-item-row2{
+    display: flex;
+    flex-direction: row;
+    margin-top: 28px;
+}
+
