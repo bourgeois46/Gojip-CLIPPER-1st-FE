@@ -1,0 +1,62 @@
+.viewRecordDetail{
+    height: 100vh;
+}
+
+.content {
+    overflow-y: auto;
+    padding-bottom: 70px; /* .row-bottom의 높이에 따라 조정 */
+    background-color: white;
+}
+
+.place-yellow{
+    margin-top: 150px;
+    height: 60.46px;
+    width: 345.03px;
+    background-color: #FFEF64; 
+    color: black; 
+    font-size: 18px;
+    text-align: center;
+    margin-left: 23px;
+    margin-right: 22px;
+    border: none; 
+    border-radius: 65.72px; 
+    font-weight: bold; 
+    cursor: pointer; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.row-bottom{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 999;
+    background-color: transparent;
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 30px;
+}
+
+.record-pre {
+    width: 28.92px;
+    height: 28.92px;
+    margin-left: 25px;
+}
+
+.btn-bottom {
+    height: 42.06px;
+    width: 258.93px;
+    background-color: #FFEF64;
+    color: black;
+    font-size: 15.77px;
+    text-align: center;
+    margin-left: 43px;
+    border: none;
+    border-radius: 65.72px;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
