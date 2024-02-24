@@ -4,6 +4,7 @@ import record_pre from '../../../assets/images/record_pre.png';
 import MapContainerDetail from '../../../components/map/MapContainerDetail';
 import ViewCharge from './Charge/ViewCharge';
 import ViewHome from './Home/ViewHome';
+import ViewRoom from './Room/ViewRoom';
 
 function ViewRecordDetailPage() {
     return (
@@ -16,6 +17,7 @@ function ViewRecordDetailPage() {
 
                 <ViewCharge/>
                 <ViewHome/>
+                <ViewRoom/>
 
             </div>
 

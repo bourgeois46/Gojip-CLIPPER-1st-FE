@@ -85,7 +85,6 @@
 }
 
 .viewHome_img{
-
     width: 36px;
     height: 36px;
     margin-top: 33px;
@@ -94,6 +93,6 @@
 .viewHome-item-row2{
     display: flex;
     flex-direction: row;
-    margin-top: 28px;
+    margin-top: 27px;
 }
 
