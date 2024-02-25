@@ -6,10 +6,12 @@ import loginbutton from "../../assets/images/loginButton.png";
 import { useNavigate } from "react-router-dom";
 
 const LoginPage = () => {
-  const Rest_api_key = "8fea833f382545a59b5d3a4544da1836"; // REST API KEY
+  const Rest_api_key = process.env.REACT_APP_KAKAO_API_KEY;
+  console.log("rest", Rest_api_key);
   const redirect_uri = "http://localhost:3000/oauth2/callback/kakao"; // Redirect URI
   const [accessToken, setAccessToken] = useState(null);
   const navigate = useNavigate();
+  const [errorMessage, setErrorMessage] = useState(null);
 
   const handleLogin = () => {
     window.location.href = kakaoURL;
@@ -24,23 +26,34 @@ const LoginPage = () => {
 
     if (code) {
       axios
-        .post("https://kauth.kakao.com/oauth/token", {
+      .post(
+        "https://kauth.kakao.com/oauth/token",
+        {
           grant_type: "authorization_code",
           client_id: Rest_api_key,
           redirect_uri,
           code,
-        })
-        .then((response) => {
-          const { access_token } = response.data;
-          setAccessToken(access_token);
-          // 로그인 성공 후 MainPage로 이동
-          navigate("/", { replace: true });
-        })
-        .catch((error) => {
-          console.error("Error fetching access token:", error);
-          setErrorMessage("액세스 토큰을 얻는 데 실패했습니다.");
-        });
+        },
+        {
+          headers: {
+            "content-type": "application/x-www-form-urlencoded;charset=utf-8",
+          },
+        }
+      )
+      .then((response) => {
+        const { access_token } = response.data;
+        setAccessToken(access_token);
+        console.log("access", access_token)
+        // 로그인 성공 후 MainPage로 이동
+
+        navigate("/", { replace: true });
+      })
+      .catch((error) => {
+        console.error("Error fetching access token:", error);
+        setErrorMessage("액세스 토큰을 얻는 데 실패했습니다.");
+      });
     }
+    
   }, []);
 
   useEffect(() => {
