@@ -1,0 +1,20 @@
+.collection-box{
+    margin-top: 99.72px;
+}
+
+.column{
+    display: flex;
+    flex-direction: column;
+}
+
+.collection-title{
+    font-size: 15.77px;
+    font-weight: bold;
+    margin-left: 17.63px;
+}
+
+.list{
+    margin-left: 30px;
+    margin-top: 10.63px;
+}
+

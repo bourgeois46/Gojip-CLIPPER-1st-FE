@@ -1,0 +1,25 @@
+.plus-box{
+    margin-top: 99.72px;
+}
+
+.column{
+    display: flex;
+    flex-direction: column;
+}
+
+.title-plus {
+    font-size: 15.77px;
+    font-weight: bold;
+    margin-left: 17.63px;
+}
+
+.input {
+    margin-top: 12px;
+    margin-left: 21.57px;
+    width: 339.11px;
+    height: 142.64px;
+    padding-left: 5px;
+    font-size: 10.52px;
+    border: 0.66px solid #CCCCCC;
+    border-radius: 13.14px;
+}

@@ -1,0 +1,96 @@
+.room-view{
+    margin-top: 54px;
+}
+
+.viewRoom-title{
+    font-size: 15.77px;
+    font-weight: bold;
+    margin-left: 17.63px;
+}
+
+.viewRoom-item-row{
+    display: flex;
+    flex-direction: row;
+}
+
+.viewRoom-details{
+    display: flex;
+    flex-direction: column;
+}
+
+.viewRoom-label-1{
+    margin-left: 30.67px;
+    font-size: 13.14px;
+    text-align: left;
+    margin-top: 35.69px;
+}
+.viewRoom-label-2{
+    margin-left: 30.67px;
+    font-size: 13.14px;
+    text-align: left;
+    margin-top: 26px;
+}
+.viewRoom-label-3{
+    margin-left: 30.67px;
+    font-size: 13.14px;
+    text-align: left;
+    margin-top: 26px;
+}
+.viewRoom-label-4{
+    margin-left: 30.67px;
+    font-size: 13.14px;
+    text-align: left;
+    margin-top: 26px;
+}
+.viewRoom-label-5{
+    margin-left: 30.67px;
+    font-size: 13.14px;
+    text-align: left;
+    margin-top: 26px;
+}
+.viewRoom-label-6{
+    margin-left: 30.67px;
+    font-size: 13.14px;
+    text-align: left;
+    margin-top: 24px;
+}
+
+.line-viewRoom{
+    width: 1px;
+    height: 270px;
+    background-color: #C8C8C8;
+    margin-left: 25.33px;
+    margin-right: 19px;
+    margin-top: 16.96px;
+}
+
+.viewRoom-item1{
+    font-size: 13.14px;
+    font-weight: bold;
+    margin-top: 33px;
+}
+.viewRoom-item2{
+    font-size: 13.14px;
+    font-weight: bold;
+    margin-top: 29px;
+}
+.viewRoom-item3{
+    width: 14px;
+    height: 13px;
+    margin-top: 28px;
+}
+.viewRoom-item4{
+    width: 14px;
+    height: 13px;
+    margin-top: 28px;
+}
+.viewRoom-item5{
+    width: 14px;
+    height: 13px;
+    margin-top: 28px;
+}
+.viewRoom-item6{
+    width: 14px;
+    height: 13px;
+    margin-top: 28px;
+}

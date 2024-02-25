@@ -1,4 +1,103 @@
-.my-page {
+.myPage {
   height: 100vh;
   background-color: white;
+}
+
+.my-column{
+  display: flex;
+  flex-direction: column;
+}
+
+.my-row{
+  display: flex;
+  flex-direction: row;
+}
+
+.my-name{
+    margin-top: 150px;
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: 32px;
+}
+
+.my-name-unit{
+  margin-top: 154px;
+  font-size: 15.77px;
+  margin-left: 7px;
+}
+
+.my-hi{
+  margin-top: 10px;
+  font-size: 15.77px;
+  margin-left: 32px;
+}
+
+.my-line1{
+    width: 344px;
+    height: 2px;
+    background-color: #F5F5F5;
+    margin-top: 25px;
+    margin-left: 24px;
+}
+
+.my-email{
+  font-size: 15.77px;
+  margin-left: 32px;
+  font-weight: bold;
+  margin-top: 36px;
+}
+
+.my-email-detail{
+  font-size: 14px;
+  margin-left: 32px;
+  margin-top: 12px;
+}
+
+.my-collection{
+  font-size: 15.77px;
+  margin-left: 32px;
+  font-weight: bold;
+  margin-top: 22px;
+}
+
+.my-line2{
+  width: 344px;
+  height: 2px;
+  background-color: #F5F5F5;
+  margin-top: 59.83px;
+  margin-left: 24px;
+}
+
+
+.my-logout{
+  width: 357px;
+  height: 53px;
+  border-radius: 20px;
+  background-color: #F5F5F5;
+  font-size: 15.77px;
+  font-weight: bold;
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+  margin-left: 17px;
+  margin-top:29px;
+}
+
+.my-withdrawal{
+  width: 357px;
+  height: 53px;
+  border-radius: 20px;
+  background-color: #F5F5F5;
+  font-size: 15.77px;
+  font-weight: bold;
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+  margin-left: 17px;
+  margin-top:9px;
+}
+
+.my-list{
+  margin-top: 12px;
+  margin-left: 32px;
 }

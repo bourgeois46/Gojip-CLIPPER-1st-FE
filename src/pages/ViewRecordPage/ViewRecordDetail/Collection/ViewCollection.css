@@ -1,0 +1,30 @@
+.collection-view{
+    margin-top: 45.74px;
+    padding-bottom: 200px;
+}
+
+.viewCollection-column{
+    display: flex;
+    flex-direction: column;
+}
+
+.viewCollection-title{
+    font-size: 15.77px;
+    font-weight: bold;
+    margin-left: 17.63px;
+}
+
+.viewCollection-detail{
+    margin-top: 16px;
+    width: 341px;
+    height: 37px;
+    border-radius: 20px;
+    background-color: #F5F5F5;
+    font-size: 13.14px;
+    font-weight: bold;
+    color: black;
+    text-align: left;
+    padding-left: 15px;
+    margin-left: 24px;
+    padding-top: 17px;
+}
