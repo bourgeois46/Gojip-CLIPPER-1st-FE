@@ -38,8 +38,10 @@ function App() {
           <Route path="/view" element={<ViewRecordPage />} />
           <Route path="/mypage" element={<MyPage />} />
           <Route path="/login" element={<LoginPage />} />
+          
       
         </Route>
+        <Route path="/oauth2/callback/kakao" element={<LoginPage />} />
       </Routes>
     </>
   );
