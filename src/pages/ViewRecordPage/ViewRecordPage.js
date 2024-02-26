@@ -71,6 +71,7 @@ function ViewRecordPage() {
             map: map,
             averageCenter: true,
             minLevel: 10,
+            texts: ["종로구 3"],
             styles: [
               {
                 width: "70px",
@@ -82,20 +83,106 @@ function ViewRecordPage() {
                 fontWeight: "bold",
                 borderRadius: "50%",
                 boxShadow: "0px 4px 6px rgba(0, 0, 0, 0.5)",
+                opacity: "0.8",
               },
             ],
           });
 
-          // positions 배열에 있는 좌표들을 이용하여 마커를 생성하고 클러스터러에 추가
+          const clustererA = new window.kakao.maps.MarkerClusterer({
+            map: map,
+            averageCenter: true,
+            minLevel: 10,
+            texts: ["노원구 2"],
+            styles: [
+              {
+                width: "70px",
+                height: "70px",
+                background: "#FFEF64",
+                textAlign: "center",
+                lineHeight: "70px",
+                fontSize: "15px",
+                fontWeight: "bold",
+                borderRadius: "50%",
+                boxShadow: "0px 4px 6px rgba(0, 0, 0, 0.5)",
+                opacity: "0.8",
+              },
+            ],
+          });
+
+          const clustererB = new window.kakao.maps.MarkerClusterer({
+            map: map,
+            averageCenter: true,
+            minLevel: 10,
+            texts: ["파주 7"],
+            styles: [
+              {
+                width: "70px",
+                height: "70px",
+                background: "#FFEF64",
+                textAlign: "center",
+                lineHeight: "70px",
+                fontSize: "15px",
+                fontWeight: "bold",
+                borderRadius: "50%",
+                boxShadow: "0px 4px 6px rgba(0, 0, 0, 0.5)",
+                opacity: "0.8",
+              },
+            ],
+          });
+
+          const clustererC = new window.kakao.maps.MarkerClusterer({
+            map: map,
+            averageCenter: true,
+            minLevel: 10,
+            texts: ["동두천 5"],
+            styles: [
+              {
+                width: "70px",
+                height: "70px",
+                background: "#FFEF64",
+                textAlign: "center",
+                lineHeight: "70px",
+                fontSize: "15px",
+                fontWeight: "bold",
+                borderRadius: "50%",
+                boxShadow: "0px 4px 6px rgba(0, 0, 0, 0.5)",
+                opacity: "0.8",
+              },
+            ],
+          });
+
           positions.forEach((pos) => {
             const marker = new window.kakao.maps.Marker({
               position: new window.kakao.maps.LatLng(pos.lat, pos.lng),
             });
             clusterer.addMarker(marker);
           });
+
+          positionsA.forEach((pos) => {
+            const marker = new window.kakao.maps.Marker({
+              position: new window.kakao.maps.LatLng(pos.lat, pos.lng),
+            });
+            clustererA.addMarker(marker);
+          });
+
+          positionsB.forEach((pos) => {
+            const marker = new window.kakao.maps.Marker({
+              position: new window.kakao.maps.LatLng(pos.lat, pos.lng),
+            });
+            clustererB.addMarker(marker);
+          });
+
+          positionsC.forEach((pos) => {
+            const marker = new window.kakao.maps.Marker({
+              position: new window.kakao.maps.LatLng(pos.lat, pos.lng),
+            });
+            clustererC.addMarker(marker);
+          });
         });
+      };
+      //document.head.appendChild(script);
     }
-  }
+
   }, [positions, positionsA, positionsB, positionsC]);
 
   return (
