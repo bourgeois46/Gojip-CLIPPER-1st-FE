@@ -4,40 +4,75 @@ import BottomSheet from "../../components/BottomSheet/BottomSheet";
 
 function ViewRecordPage() {
   const [positions, setPositions] = useState([]);
+  const [positionsA, setPositionsA] = useState([]);
+  const [positionsB, setPositionsB] = useState([]);
+  const [positionsC, setPositionsC] = useState([]);
 
   // 하드코딩된 위치 데이터
   const clusterPositionsData = {
     positions: [
-      { lat: 37.5895, lng: 127.0167 },
-      { lat: 37.59, lng: 127.015 },
-      { lat: 37.588, lng: 127.018 },
+      // 종로구
+      { lat: 37.6549, lng: 127.0474 },
+      { lat: 37.6434, lng: 127.0579 },
+      { lat: 37.6379, lng: 127.0421 },
+    ],
+    positionsA: [
+      // 노원구
+      { lat: 37.5754, lng: 126.9779 },
+      { lat: 37.5723, lng: 126.9824 },
+    ],
+    positionsB: [
+      // 파주
+      { lat: 37.7485, lng: 126.7858 },
+      { lat: 37.7412, lng: 126.7925 },
+      { lat: 37.7327, lng: 126.7992 },
+      { lat: 37.7253, lng: 126.8059 },
+      { lat: 37.7179, lng: 126.8127 },
+      { lat: 37.7105, lng: 126.8194 },
+      { lat: 37.7031, lng: 126.8261 },
+    ],
+    positionsC: [
+      // 동두천
+      { lat: 37.9514, lng: 126.9291 },
+      { lat: 37.9472, lng: 126.9332 },
+      { lat: 37.9383, lng: 126.9302 },
+      { lat: 37.9352, lng: 126.9261 },
+      { lat: 37.9283, lng: 126.9375 },
     ],
   };
 
   useEffect(() => {
     // 클러스터링할 위치 데이터를 가져와서 positions 상태 업데이트
     setPositions(clusterPositionsData.positions);
+    setPositionsA(clusterPositionsData.positionsA);
+    setPositionsB(clusterPositionsData.positionsB);
+    setPositionsC(clusterPositionsData.positionsC);
   }, []);
 
   useEffect(() => {
-    if (positions.length > 0) {
+    if (
+      positions.length > 0 ||
+      positionsA.length > 0 ||
+      positionsB.length > 0 ||
+      positionsC.length > 0
+    ) {
       const script = document.createElement("script");
       script.src =
-        "https://dapi.kakao.com/v2/maps/sdk.js?autoload=false&appkey=6607bd619f830fb2254f539c2c548f5d&libraries=clusterer";
+        "https://dapi.kakao.com/v2/maps/sdk.js?autoload=false&appkey=0dacb306137537eb0950042bd67ed3ff&libraries=clusterer";
       script.onload = () => {
         kakao.maps.load(() => {
           const mapContainer = document.getElementById("map");
           const options = {
             center: new kakao.maps.LatLng(37.5665, 126.978),
-            level: 10, // 확대 레벨
+            level: 10,
           };
-          const map = new kakao.maps.Map(mapContainer, options); // 맵생성
+          const map = new kakao.maps.Map(mapContainer, options);
 
-          // 마커 클러스터러 생성
           const clusterer = new kakao.maps.MarkerClusterer({
             map: map,
             averageCenter: true,
             minLevel: 10,
+            texts: ["종로구 3"],
             styles: [
               {
                 width: "70px",
@@ -49,22 +84,106 @@ function ViewRecordPage() {
                 fontWeight: "bold",
                 borderRadius: "50%",
                 boxShadow: "0px 4px 6px rgba(0, 0, 0, 0.5)",
+                opacity: "0.8",
               },
             ],
           });
 
-          // positions 배열에 있는 좌표들을 이용하여 마커를 생성하고 클러스터러에 추가
+          const clustererA = new kakao.maps.MarkerClusterer({
+            map: map,
+            averageCenter: true,
+            minLevel: 10,
+            texts: ["노원구 2"],
+            styles: [
+              {
+                width: "70px",
+                height: "70px",
+                background: "#FFEF64",
+                textAlign: "center",
+                lineHeight: "70px",
+                fontSize: "15px",
+                fontWeight: "bold",
+                borderRadius: "50%",
+                boxShadow: "0px 4px 6px rgba(0, 0, 0, 0.5)",
+                opacity: "0.8",
+              },
+            ],
+          });
+
+          const clustererB = new kakao.maps.MarkerClusterer({
+            map: map,
+            averageCenter: true,
+            minLevel: 10,
+            texts: ["파주 7"],
+            styles: [
+              {
+                width: "70px",
+                height: "70px",
+                background: "#FFEF64",
+                textAlign: "center",
+                lineHeight: "70px",
+                fontSize: "15px",
+                fontWeight: "bold",
+                borderRadius: "50%",
+                boxShadow: "0px 4px 6px rgba(0, 0, 0, 0.5)",
+                opacity: "0.8",
+              },
+            ],
+          });
+
+          const clustererC = new kakao.maps.MarkerClusterer({
+            map: map,
+            averageCenter: true,
+            minLevel: 10,
+            texts: ["동두천 5"],
+            styles: [
+              {
+                width: "70px",
+                height: "70px",
+                background: "#FFEF64",
+                textAlign: "center",
+                lineHeight: "70px",
+                fontSize: "15px",
+                fontWeight: "bold",
+                borderRadius: "50%",
+                boxShadow: "0px 4px 6px rgba(0, 0, 0, 0.5)",
+                opacity: "0.8",
+              },
+            ],
+          });
+
           positions.forEach((pos) => {
             const marker = new kakao.maps.Marker({
               position: new kakao.maps.LatLng(pos.lat, pos.lng),
             });
             clusterer.addMarker(marker);
           });
+
+          positionsA.forEach((pos) => {
+            const marker = new kakao.maps.Marker({
+              position: new kakao.maps.LatLng(pos.lat, pos.lng),
+            });
+            clustererA.addMarker(marker);
+          });
+
+          positionsB.forEach((pos) => {
+            const marker = new kakao.maps.Marker({
+              position: new kakao.maps.LatLng(pos.lat, pos.lng),
+            });
+            clustererB.addMarker(marker);
+          });
+
+          positionsC.forEach((pos) => {
+            const marker = new kakao.maps.Marker({
+              position: new kakao.maps.LatLng(pos.lat, pos.lng),
+            });
+            clustererC.addMarker(marker);
+          });
         });
       };
       document.head.appendChild(script);
     }
-  }, [positions]);
+  }, [positions, positionsA, positionsB, positionsC]);
 
   return (
     <div className="record-page">

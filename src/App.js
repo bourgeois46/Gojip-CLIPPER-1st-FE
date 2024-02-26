@@ -9,6 +9,7 @@ import ViewRecordPage from "./pages/ViewRecordPage/ViewRecordPage";
 import MyPage from "./pages/MyPage/MyPage";
 import RecordMapSearchPage from "./pages/RecordPage/RecordMapSearchPage";
 import ViewRecordDetilPage from "./pages/ViewRecordPage/ViewRecordDetail/ViewRecordDetailPage";
+import ViewRecordDetailPage from "./pages/ViewRecordPage/ViewRecordDetail/ViewRecordDetailPage";
 
 const Layout = () => {
   return (
@@ -38,8 +39,8 @@ function App() {
           <Route path="/view" element={<ViewRecordPage />} />
           <Route path="/mypage" element={<MyPage />} />
           <Route path="/login" element={<LoginPage />} />
-          
-      
+          <Route path="/check" element={<RecordPage />} />
+          <Route path="/viewdetail" element={<ViewRecordDetailPage />} />
         </Route>
         <Route path="/oauth2/callback/kakao" element={<LoginPage />} />
       </Routes>
