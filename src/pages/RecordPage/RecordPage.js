@@ -38,7 +38,7 @@ function RecordPage() {
 
             <div className='row-bottom'>
                 <img className='record-pre' src={record_pre} alt='record_pre'/>
-                <button className='btn-bottom'>이 집 체크하러가기</button>
+                <button className='btn-bottom'>체크리스트 저장</button>
             </div>
         </div>
     );

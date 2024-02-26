@@ -44,9 +44,7 @@ const LoginPage = () => {
         const { access_token } = response.data;
         setAccessToken(access_token);
         console.log("access", access_token)
-        // 로그인 성공 후 MainPage로 이동
-
-        navigate("/", { replace: true });
+      
       })
       .catch((error) => {
         console.error("Error fetching access token:", error);
@@ -57,23 +55,32 @@ const LoginPage = () => {
   }, []);
 
   useEffect(() => {
-    if (accessToken) {
-      axios
-        .get("https://kapi.kakao.com/v2/user/me", {
-          headers: {
-            Authorization: `Bearer ${accessToken}`,
-          },
-        })
-        .then((response) => {
+    console.log('useEffect 실행: ', accessToken)
+    const fetchUserInfo = async () => {
+      if (accessToken) {
+        // 로그인 성공 후 MainPage로 이동
+        navigate("/", { replace: true });
+        console.log('로그인 성공!');
+        /*try {
+          const response = await axios.get("https://kapi.kakao.com/v2/user/me", {
+            headers: {
+              Authorization: `Bearer ${accessToken}`,
+            },
+          });
           console.log("User info:", response.data);
-          // 여기서 가져온 사용자 정보를 활용할 수 있습니다.
-        })
-        .catch((error) => {
+        } catch (error) {
           console.error("Error fetching user info:", error);
           setErrorMessage("사용자 정보를 얻는 데 실패했습니다.");
-        });
-    }
+        }*/
+      }
+      else {
+        console.log('로그인 실패 또는 아직 로그인하지 않음');
+      }
+    };
+  
+    fetchUserInfo();
   }, [accessToken]);
+  
 
   return (
     <div className="login-page">
