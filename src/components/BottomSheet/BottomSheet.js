@@ -2,9 +2,10 @@ import useBottomSheet from "../../hooks/useBottomSheet";
 import * as S from "./BottomSheet.style";
 import Header from "./Header";
 import { useMotionValue, useTransform } from "framer-motion";
-import roompic from "../../assets/images/room-pic.png";
-import { useState} from "react";
+import homeblack from "../../assets/images/homeBlack.png";
+import { useState } from "react";
 import CollectionModal from "../Modal/CollectionModal";
+import { Link } from "react-router-dom";
 
 const BottomSheet = ({ children }) => {
   const { onDragEnd, controls } = useBottomSheet();
@@ -12,7 +13,7 @@ const BottomSheet = ({ children }) => {
   const [clickedViewEntire, setClickedViewEntire] = useState(true);
   const [clickedViewCollection, setClickedViewCollection] = useState(false);
   const [showCollectionModal, setShowCollectionModal] = useState(false);
-  
+
   // 모달을 위로 드래그할 때 모달의 높이를 동적으로 조절
   const height = useTransform(dragY, [0, -100], [200, "100vh"]);
 
@@ -25,7 +26,6 @@ const BottomSheet = ({ children }) => {
     setClickedViewEntire(false);
     setClickedViewCollection(true);
     setShowCollectionModal(true); // 컬렉션 보기 모달
-    console.log('showCollectionModal:', showCollectionModal);
   };
 
   return (
@@ -51,7 +51,7 @@ const BottomSheet = ({ children }) => {
       <Header />
       <S.ContentWrapper>
         {children}
-        <S.Gu>서대문구</S.Gu>
+        <S.Gu>종로구</S.Gu>
         <S.Line />
         <S.FilterContainer>
           <S.SetFilter>필터 설정</S.SetFilter>
@@ -72,23 +72,29 @@ const BottomSheet = ({ children }) => {
         </S.FilterContainer>
 
         <S.HouseInfo>
-          <S.Image src={roompic} alt="roompic" />
+          <Link to="/viewdetail">
+            <S.Image src={homeblack} alt="homeblack" />
+          </Link>
           <S.TextInfoContainer>
-            <S.TextInfo>이름</S.TextInfo>
-            <S.TextInfo>월세</S.TextInfo>
+            <S.TextInfo>월세 </S.TextInfo>
             <S.TextInfo>위치상세</S.TextInfo>
           </S.TextInfoContainer>
-          <S.Line top={320} />
+          <S.TextInfoA>500/50</S.TextInfoA>
+          <S.TextInfoA>서울특별시 종로구</S.TextInfoA>
+          <S.TextInfoA>도로명길 12</S.TextInfoA>
+          <S.Line top={325} />
         </S.HouseInfo>
 
         <S.HouseInfo>
-          <S.Image src={roompic} alt="roompic" />
+          <S.Image src={homeblack} alt="homeblack" />
           <S.TextInfoContainer>
-            <S.TextInfo>이름</S.TextInfo>
             <S.TextInfo>월세</S.TextInfo>
             <S.TextInfo>위치상세</S.TextInfo>
           </S.TextInfoContainer>
-          <S.Line top={320} />
+          <S.TextInfoA>1000/80</S.TextInfoA>
+          <S.TextInfoA>서울특별시 종로구</S.TextInfoA>
+          <S.TextInfoA>홍지동 125번지</S.TextInfoA>
+          <S.Line top={510} />
         </S.HouseInfo>
       </S.ContentWrapper>
 

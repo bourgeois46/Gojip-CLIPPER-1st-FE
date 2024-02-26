@@ -18,7 +18,7 @@ const ModalContent = styled.div`
   background-color: white;
   padding: 20px;
   border-radius: 14px;
-  width: 260px;
+  width: 250px;
   z-index: 101;
   margin-top: -200px;
 `;
@@ -56,10 +56,9 @@ const Line = styled.div`
 `;
 
 const CollectionModal = ({ onClose }) => {
-  console.log('CollectionModal rendered');
   const handleOverlayClick = (e) => {
     if (e.target === e.currentTarget) {
-      onClose(); // 모달 닫기 이벤트 호출
+      onClose();
     }
   };
 
@@ -69,11 +68,11 @@ const CollectionModal = ({ onClose }) => {
         <CollectionOptions>
           <OptionButton>기본</OptionButton>
           <Line />
-          <OptionButton>첫번째 자취방</OptionButton>
+          <OptionButton>item1</OptionButton>
           <Line top={60} />
-          <OptionButton>두번째 자취방</OptionButton>
+          <OptionButton>item2</OptionButton>
           <Line top={93} />
-          <OptionButton>세번째 자취방</OptionButton>
+          <OptionButton>item3</OptionButton>
         </CollectionOptions>
       </ModalContent>
     </ModalOverlay>
