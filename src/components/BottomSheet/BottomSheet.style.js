@@ -127,8 +127,11 @@ const HouseInfo = styled.div`
 `;
 
 const Image = styled.img`
-  margin-top: 20px;
-  height: auto;
+  margin-left: 30px;
+  margin-right: auto;
+  margin-top: 50px;
+  width: 55px;
+  height: 55px;
 `;
 
 const TextInfoContainer = styled.div`
@@ -137,8 +140,19 @@ const TextInfoContainer = styled.div`
 `;
 const TextInfo = styled.div`
   position: relative;
-  top: -90px;
+  top: -60px;
   left: 150px;
+  font-style: Inter;
+  font-size: 16px;
+`;
+
+const TextInfoA = styled.div`
+  position: relative;
+  top: -103px;
+  left: 230px;
+  font-style: Inter;
+  font-size: 14px;
+  color: #616161;
 `;
 
 export {
@@ -156,4 +170,5 @@ export {
   TextInfoContainer,
   ViewCollection,
   ViewEntire,
+  TextInfoA,
 };

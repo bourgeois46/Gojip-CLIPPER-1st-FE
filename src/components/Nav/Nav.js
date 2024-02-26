@@ -68,13 +68,13 @@ const Nav = () => {
         <div ref={sidebarRef}>
           <UserSidebar setIsSidebarOpen={setIsSidebarOpen} />
         </div>
-      )
-      }
-      {/*isSidebarOpen && (
+      )}
+
+      {/*{isSidebarOpen && (
         <div ref={sidebarRef}>
           <GuestSidebar setIsSidebarOpen={setIsSidebarOpen} />
         </div>
-      )*/}
+      )}*/}
     </>
   );
 };
