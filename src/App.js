@@ -22,15 +22,27 @@ const Layout = () => {
 };
 
 function App() {
+  const [mapLoaded, setMapLoaded] = useState(false);
+
   function setScreenSize() {
     let vh = window.innerHeight * 0.01;
     document.documentElement.style.setProperty("--vh", `${vh}px`);
   }
+
   useEffect(() => {
     setScreenSize();
-  });
+    // 카카오 지도 API 스크립트 로드
+    const script = document.createElement("script");
+    script.src =
+      "https://dapi.kakao.com/v2/maps/sdk.js?autoload=false&appkey=6607bd619f830fb2254f539c2c548f5d&libraries=services,clusterer";
+    document.head.appendChild(script);
 
-  return (
+    script.onload = () => {
+      setMapLoaded(true);
+    };
+  }, []);
+
+  return mapLoaded ? (
     <>
       <Routes>
         <Route path="/" element={<Layout />}>
@@ -39,12 +51,10 @@ function App() {
           <Route path="/view" element={<ViewRecordPage />} />
           <Route path="/mypage" element={<MyPage />} />
           <Route path="/login" element={<LoginPage />} />
-          <Route path="/check" element={<RecordPage />} />
-          <Route path="/viewdetail" element={<ViewRecordDetailPage />} />
         </Route>
         <Route path="/oauth2/callback/kakao" element={<LoginPage />} />
       </Routes>
     </>
-  );
+  ) : null;
 }
 export default App;

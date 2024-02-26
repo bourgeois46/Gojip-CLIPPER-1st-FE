@@ -25,7 +25,7 @@ function RoomBox({ isChecked, handleCheckboxChange }) {
 
     return (
         <div className='room-box'>
-        <div className="room-title">비용</div>
+        <div className="room-title">방</div>
         <div className='room-item-row'>
             <div className="room-details">
                 <text className="room-label-1">채광</text>

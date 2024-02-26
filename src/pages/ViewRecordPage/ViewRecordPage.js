@@ -56,23 +56,21 @@ function ViewRecordPage() {
       positionsB.length > 0 ||
       positionsC.length > 0
     ) {
-      const script = document.createElement("script");
-      script.src =
-        "https://dapi.kakao.com/v2/maps/sdk.js?autoload=false&appkey=0dacb306137537eb0950042bd67ed3ff&libraries=clusterer";
-      script.onload = () => {
-        kakao.maps.load(() => {
-          const mapContainer = document.getElementById("map");
+    if (window.kakao && window.kakao.maps && positions.length > 0) {
+        const mapContainer = document.getElementById("map");
+
+        window.kakao.maps.load(() => {
           const options = {
             center: new kakao.maps.LatLng(37.5665, 126.978),
-            level: 10,
+            level: 10, // 확대 레벨
           };
-          const map = new kakao.maps.Map(mapContainer, options);
+          const map = new window.kakao.maps.Map(mapContainer, options); // 맵생성
 
-          const clusterer = new kakao.maps.MarkerClusterer({
+          // 마커 클러스터러 생성
+          const clusterer = new window.kakao.maps.MarkerClusterer({
             map: map,
             averageCenter: true,
             minLevel: 10,
-            texts: ["종로구 3"],
             styles: [
               {
                 width: "70px",
@@ -84,105 +82,20 @@ function ViewRecordPage() {
                 fontWeight: "bold",
                 borderRadius: "50%",
                 boxShadow: "0px 4px 6px rgba(0, 0, 0, 0.5)",
-                opacity: "0.8",
               },
             ],
           });
 
-          const clustererA = new kakao.maps.MarkerClusterer({
-            map: map,
-            averageCenter: true,
-            minLevel: 10,
-            texts: ["노원구 2"],
-            styles: [
-              {
-                width: "70px",
-                height: "70px",
-                background: "#FFEF64",
-                textAlign: "center",
-                lineHeight: "70px",
-                fontSize: "15px",
-                fontWeight: "bold",
-                borderRadius: "50%",
-                boxShadow: "0px 4px 6px rgba(0, 0, 0, 0.5)",
-                opacity: "0.8",
-              },
-            ],
-          });
-
-          const clustererB = new kakao.maps.MarkerClusterer({
-            map: map,
-            averageCenter: true,
-            minLevel: 10,
-            texts: ["파주 7"],
-            styles: [
-              {
-                width: "70px",
-                height: "70px",
-                background: "#FFEF64",
-                textAlign: "center",
-                lineHeight: "70px",
-                fontSize: "15px",
-                fontWeight: "bold",
-                borderRadius: "50%",
-                boxShadow: "0px 4px 6px rgba(0, 0, 0, 0.5)",
-                opacity: "0.8",
-              },
-            ],
-          });
-
-          const clustererC = new kakao.maps.MarkerClusterer({
-            map: map,
-            averageCenter: true,
-            minLevel: 10,
-            texts: ["동두천 5"],
-            styles: [
-              {
-                width: "70px",
-                height: "70px",
-                background: "#FFEF64",
-                textAlign: "center",
-                lineHeight: "70px",
-                fontSize: "15px",
-                fontWeight: "bold",
-                borderRadius: "50%",
-                boxShadow: "0px 4px 6px rgba(0, 0, 0, 0.5)",
-                opacity: "0.8",
-              },
-            ],
-          });
-
+          // positions 배열에 있는 좌표들을 이용하여 마커를 생성하고 클러스터러에 추가
           positions.forEach((pos) => {
-            const marker = new kakao.maps.Marker({
-              position: new kakao.maps.LatLng(pos.lat, pos.lng),
+            const marker = new window.kakao.maps.Marker({
+              position: new window.kakao.maps.LatLng(pos.lat, pos.lng),
             });
             clusterer.addMarker(marker);
           });
-
-          positionsA.forEach((pos) => {
-            const marker = new kakao.maps.Marker({
-              position: new kakao.maps.LatLng(pos.lat, pos.lng),
-            });
-            clustererA.addMarker(marker);
-          });
-
-          positionsB.forEach((pos) => {
-            const marker = new kakao.maps.Marker({
-              position: new kakao.maps.LatLng(pos.lat, pos.lng),
-            });
-            clustererB.addMarker(marker);
-          });
-
-          positionsC.forEach((pos) => {
-            const marker = new kakao.maps.Marker({
-              position: new kakao.maps.LatLng(pos.lat, pos.lng),
-            });
-            clustererC.addMarker(marker);
-          });
         });
-      };
-      document.head.appendChild(script);
     }
+  }
   }, [positions, positionsA, positionsB, positionsC]);
 
   return (
@@ -198,3 +111,4 @@ function ViewRecordPage() {
 }
 
 export default ViewRecordPage;
+
