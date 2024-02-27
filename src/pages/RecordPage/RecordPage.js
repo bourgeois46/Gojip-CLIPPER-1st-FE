@@ -41,7 +41,7 @@ function RecordPage() {
   return (
     <div className="recordPage">
       <div className="content">
-          <div className="place-yellow">{addressName}</div>
+          <div className="place-yellow">서울 마포구 노고산동</div>
 
         <ChargeBox
           isChecked={isOneChecked}

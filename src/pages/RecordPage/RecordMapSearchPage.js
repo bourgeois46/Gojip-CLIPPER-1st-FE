@@ -8,7 +8,11 @@ import { saveAddress } from '../../api/saveAddress';
 function RecordMapSearchPage() {
   const [inputText, setInputText] = useState("");
   const [place, setPlace] = useState("");
-  const [addressName, setAddressName] = useState("");
+  const [addressName, setAddressName] = useState(localStorage.getItem('address'));
+
+  useEffect(() => {
+    setAddressName(localStorage.getItem('address'));
+  }, []);
 
   const onChange = (e) => {
     setInputText(e.target.value);
