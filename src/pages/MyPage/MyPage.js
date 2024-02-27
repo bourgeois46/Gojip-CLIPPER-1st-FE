@@ -7,6 +7,8 @@ import list_check from "../../assets/images/list_check.png";
 function MyPage() {
   const [isListViewOpen, setIsListViewOpen] = useState(false);
   const [selectedItem, setSelectedItem] = useState(items[0]);
+  const email = localStorage.getItem('email');
+  const nickname = localStorage.getItem('nickname');
 
   const handleBoxClick = () => {
     setIsListViewOpen(!isListViewOpen);
@@ -20,14 +22,14 @@ function MyPage() {
     <div className="myPage">
       <div className="my-column">
         <div className="my-row">
-          <div className="my-name">고집불통</div>
+          <div className="my-name">{nickname}</div>
           <div className="my-name-unit">님</div>
         </div>
         <div className="my-hi">안녕하세요~</div>
         <div className="my-line1" />
 
         <div className="my-email">이메일</div>
-        <div className="my-email-detail">gojip123@naver.com</div>
+        <div className="my-email-detail">{email}</div>
 
         <div className="my-collection">컬렉션 추가/수정</div>
         <div className="my-list">

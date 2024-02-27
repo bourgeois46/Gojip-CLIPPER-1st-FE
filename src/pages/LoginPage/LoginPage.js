@@ -67,6 +67,9 @@ const LoginPage = () => {
 
           localStorage.setItem('accessToken', data.data.accessToken);
           localStorage.setItem('role', data.data.role);
+          localStorage.setItem('email', data.data.email);
+          localStorage.setItem('nickname', data.data.nickname);
+          
           console.log("accessToken_save", data.data.accessToken);
 
         })
