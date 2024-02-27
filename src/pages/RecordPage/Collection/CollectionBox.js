@@ -100,6 +100,6 @@ const ListView = ({ items, onItemClick, selectedItem }) => {
 };
 
 
-const items = ['item1', 'item2', 'item3'];
+const items = ["종로구", "역세권", "학교 근처"];
 
 export default CollectionBox;

@@ -17,7 +17,7 @@ function RecordMapSearchPage() {
   const handleSubmit = (e) => {
     e.preventDefault();
     setPlace(inputText);
-    setInputText("");
+    //setInputText("");
   };
 
   return (
