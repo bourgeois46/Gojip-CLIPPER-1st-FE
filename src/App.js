@@ -7,7 +7,6 @@ import RecordPage from "./pages/RecordPage/RecordPage";
 import ViewRecordPage from "./pages/ViewRecordPage/ViewRecordPage";
 import MyPage from "./pages/MyPage/MyPage";
 import RecordMapSearchPage from "./pages/RecordPage/RecordMapSearchPage";
-import ViewRecordDetilPage from "./pages/ViewRecordPage/ViewRecordDetail/ViewRecordDetailPage";
 import ViewRecordDetailPage from "./pages/ViewRecordPage/ViewRecordDetail/ViewRecordDetailPage";
 
 const Layout = () => {
