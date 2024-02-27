@@ -4,10 +4,10 @@ import "./LoginPage.css";
 import logintext from "../../assets/images/loginText.png";
 import loginbutton from "../../assets/images/loginButton.png";
 import { useNavigate } from "react-router-dom";
+import { loginKakao } from '../../api/loginKakao';
 
 const LoginPage = () => {
   const Rest_api_key = process.env.REACT_APP_KAKAO_API_KEY;
-  console.log("rest", Rest_api_key);
   const redirect_uri = "http://localhost:3000/oauth2/callback/kakao"; // Redirect URI
   const [accessToken, setAccessToken] = useState(null);
   const navigate = useNavigate();
@@ -19,7 +19,7 @@ const LoginPage = () => {
 
   const kakaoURL = `https://kauth.kakao.com/oauth/authorize?client_id=${Rest_api_key}&redirect_uri=${redirect_uri}&response_type=code`;
 
-  // 액세스 토큰 가져오기
+  // 카카오에서 액세스 토큰 가져오기
   useEffect(() => {
     const urlParams = new URLSearchParams(window.location.search);
     const code = urlParams.get("code");
@@ -54,24 +54,25 @@ const LoginPage = () => {
     
   }, []);
 
+  // /login/kakao API에 요청 보내기
   useEffect(() => {
     console.log('useEffect 실행: ', accessToken)
     const fetchUserInfo = async () => {
       if (accessToken) {
-        // 로그인 성공 후 MainPage로 이동
-        navigate("/", { replace: true });
-        console.log('로그인 성공!');
-        /*try {
-          const response = await axios.get("https://kapi.kakao.com/v2/user/me", {
-            headers: {
-              Authorization: `Bearer ${accessToken}`,
-            },
-          });
-          console.log("User info:", response.data);
-        } catch (error) {
-          console.error("Error fetching user info:", error);
-          setErrorMessage("사용자 정보를 얻는 데 실패했습니다.");
-        }*/
+        loginKakao(accessToken)
+        .then((data) => {
+          console.log('로그인 성공!', data);
+          // 로그인 성공 후 MainPage로 이동
+          navigate("/", { replace: true });
+
+          localStorage.setItem('accessToken', data.data.accessToken);
+          localStorage.setItem('role', data.data.role);
+          console.log("accessToken_save", data.data.accessToken);
+
+        })
+        .catch((error) => {
+          console.log('로그인 실패:', error);
+        });
       }
       else {
         console.log('로그인 실패 또는 아직 로그인하지 않음');
@@ -80,7 +81,6 @@ const LoginPage = () => {
   
     fetchUserInfo();
   }, [accessToken]);
-  
 
   return (
     <div className="login-page">

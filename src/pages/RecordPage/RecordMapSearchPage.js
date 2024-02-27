@@ -3,10 +3,12 @@ import "./RecordMapSearchPage.css";
 import search_icon from "../../assets/images/icon_search.png";
 import MapContainer from "../../components/map/MapContainer";
 import { NavLink, Link } from "react-router-dom";
+import { saveAddress } from '../../api/saveAddress';
 
 function RecordMapSearchPage() {
   const [inputText, setInputText] = useState("");
   const [place, setPlace] = useState("");
+  const [addressName, setAddressName] = useState("");
 
   const onChange = (e) => {
     setInputText(e.target.value);
@@ -40,10 +42,12 @@ function RecordMapSearchPage() {
           </button>
         </form>
 
-        <MapContainer className="map-circle" searchPlace={place} />
-        <Link to="/check">
-          <button className="btn">이 집 체크하러가기</button>
-        </Link>
+        <MapContainer className="map-circle" searchPlace={place} setAddressName={setAddressName} />
+        <Link to={{
+  pathname: "/check",
+}}>
+  <button className="btn" onClick={() => saveAddress(addressName)}>이 집 체크하러가기</button>
+</Link>
       </div>
     </div>
   );

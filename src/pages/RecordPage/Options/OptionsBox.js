@@ -29,16 +29,16 @@ function OptionsBox() {
     ];
 
     const outItems1 = [
-        {type:0, name:"주차장"},
-        {type:1, name:"CCTV"},
-        {type:2, name:"엘리베이터"},
-        {type:3, name:"관리실"},
+        {type:14, name:"주차장"},
+        {type:15, name:"CCTV"},
+        {type:16, name:"엘리베이터"},
+        {type:17, name:"관리실"},
 
     ]
 
     const outItems2 = [
-        {type:4, name:"공동현관"},
-        {type:5, name:"분리배출 공간"},
+        {type:18, name:"공동현관"},
+        {type:19, name:"분리배출 공간"},
     ]
     return (
         <div className='options-box'>

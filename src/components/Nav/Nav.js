@@ -9,6 +9,7 @@ const Nav = () => {
   const [show, setShow] = useState(false);
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const sidebarRef = useRef(null);
+  const role = localStorage.getItem('role');
 
   const handleSidebarButtonClick = () => {
     setIsSidebarOpen(true);
@@ -63,18 +64,16 @@ const Nav = () => {
           onClick={handleSidebarButtonClick}
         />
       </nav>
-      {/*로그인 유무 따라서 조건문 수정}*/}
       {isSidebarOpen && (
         <div ref={sidebarRef}>
-          <UserSidebar setIsSidebarOpen={setIsSidebarOpen} />
+          {role === 'USER' ? (
+            <UserSidebar setIsSidebarOpen={setIsSidebarOpen} />
+          ) : (
+            <GuestSidebar setIsSidebarOpen={setIsSidebarOpen} />
+          )}
         </div>
       )}
-
-      {/*{isSidebarOpen && (
-        <div ref={sidebarRef}>
-          <GuestSidebar setIsSidebarOpen={setIsSidebarOpen} />
-        </div>
-      )}*/}
+      
     </>
   );
 };
