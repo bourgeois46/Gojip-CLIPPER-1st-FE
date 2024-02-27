@@ -112,6 +112,7 @@ const ListView = ({ items, onItemClick, selectedItem }) => {
               </div>
           ))}
       </div>
+
   );
 };
 

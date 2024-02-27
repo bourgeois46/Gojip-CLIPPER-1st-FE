@@ -1,6 +1,7 @@
 {
   "name": "gojip-client",
   "version": "0.1.0",
+  "proxy": "http://52.78.207.235:8080",
   "private": true,
   "dependencies": {
     "@reduxjs/toolkit": "^2.0.1",
