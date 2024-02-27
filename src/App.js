@@ -3,7 +3,6 @@ import MainPage from "./pages/MainPage/MainPage";
 import LoginPage from "./pages/LoginPage/LoginPage";
 import { Routes, Route, Outlet } from "react-router-dom";
 import Nav from "./components/Nav/Nav";
-import Footer from "./components/Footer/Footer";
 import RecordPage from "./pages/RecordPage/RecordPage";
 import ViewRecordPage from "./pages/ViewRecordPage/ViewRecordPage";
 import MyPage from "./pages/MyPage/MyPage";
@@ -16,7 +15,6 @@ const Layout = () => {
     <div>
       <Nav />
       <Outlet />
-      <Footer />
     </div>
   );
 };
@@ -51,6 +49,8 @@ function App() {
           <Route path="/view" element={<ViewRecordPage />} />
           <Route path="/mypage" element={<MyPage />} />
           <Route path="/login" element={<LoginPage />} />
+          <Route path="/check" element={<RecordPage />} />
+          <Route path="/viewdetail" element={<ViewRecordDetailPage />} />
         </Route>
         <Route path="/oauth2/callback/kakao" element={<LoginPage />} />
       </Routes>
