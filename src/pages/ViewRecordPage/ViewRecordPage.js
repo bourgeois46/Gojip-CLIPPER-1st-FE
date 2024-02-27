@@ -56,7 +56,7 @@ function ViewRecordPage() {
       positionsB.length > 0 ||
       positionsC.length > 0
     ) {
-    if (window.kakao && window.kakao.maps && positions.length > 0) {
+      if (window.kakao && window.kakao.maps && positions.length > 0) {
         const mapContainer = document.getElementById("map");
 
         window.kakao.maps.load(() => {
@@ -179,10 +179,9 @@ function ViewRecordPage() {
             clustererC.addMarker(marker);
           });
         });
-      };
+      }
       //document.head.appendChild(script);
     }
-
   }, [positions, positionsA, positionsB, positionsC]);
 
   return (
@@ -198,4 +197,3 @@ function ViewRecordPage() {
 }
 
 export default ViewRecordPage;
-

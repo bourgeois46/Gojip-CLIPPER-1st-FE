@@ -48,7 +48,7 @@ function RecordPage() {
         <Link to="/record">
           <img className="record-pre" src={record_pre} alt="record_pre" />
         </Link>
-        <button className="btn-bottom">이 집 체크하러가기</button>
+        <button className="btn-bottom">저장하기</button>
       </div>
     </div>
   );
