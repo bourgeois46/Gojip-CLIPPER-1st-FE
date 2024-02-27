@@ -66,13 +66,13 @@ const CollectionModal = ({ onClose }) => {
     <ModalOverlay onClick={handleOverlayClick}>
       <ModalContent>
         <CollectionOptions>
-          <OptionButton>기본</OptionButton>
+          <OptionButton onClick={onClose}>기본</OptionButton>
           <Line />
-          <OptionButton>item1</OptionButton>
+          <OptionButton>종로구</OptionButton>
           <Line top={60} />
-          <OptionButton>item2</OptionButton>
+          <OptionButton>역세권</OptionButton>
           <Line top={93} />
-          <OptionButton>item3</OptionButton>
+          <OptionButton>학교 근처</OptionButton>
         </CollectionOptions>
       </ModalContent>
     </ModalOverlay>

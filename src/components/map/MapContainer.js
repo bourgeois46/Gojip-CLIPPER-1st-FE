@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect } from "react";
 
 const MapContainer = ({ searchPlace, setAddressName }) => {
     useEffect(() => {
@@ -43,18 +43,21 @@ const MapContainer = ({ searchPlace, setAddressName }) => {
         }
     }, [searchPlace, setAddressName]);
 
-    return (
-        <div id='myMap' style={{
-            width: '333px', 
-            height: '333px',
-            borderRadius: '100%',
-            alignItems: 'center',
-            border: 'none',
-            boxShadow: '#C8C8C8',
-            marginTop: '45px',
-            marginLeft: '28px'
-        }}></div>
-    );
-}
+  return (
+    <div
+      id="myMap"
+      style={{
+        width: "333px",
+        height: "333px",
+        borderRadius: "100%",
+        alignItems: "center",
+        border: "none",
+        boxShadow: "#C8C8C8",
+        marginTop: "45px",
+        marginLeft: "28px",
+      }}
+    ></div>
+  );
+};
 
 export default MapContainer;

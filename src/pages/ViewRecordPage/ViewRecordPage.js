@@ -15,6 +15,9 @@ function ViewRecordPage() {
       { lat: 37.6549, lng: 127.0474 },
       { lat: 37.6434, lng: 127.0579 },
       { lat: 37.6379, lng: 127.0421 },
+      { lat: 37.6559, lng: 127.0574 },
+      { lat: 37.6443, lng: 127.0569 },
+      { lat: 37.6374, lng: 127.0522 },
     ],
     positionsA: [
       // 노원구
@@ -56,7 +59,7 @@ function ViewRecordPage() {
       positionsB.length > 0 ||
       positionsC.length > 0
     ) {
-    if (window.kakao && window.kakao.maps && positions.length > 0) {
+      if (window.kakao && window.kakao.maps && positions.length > 0) {
         const mapContainer = document.getElementById("map");
 
         window.kakao.maps.load(() => {
@@ -71,7 +74,7 @@ function ViewRecordPage() {
             map: map,
             averageCenter: true,
             minLevel: 10,
-            texts: ["종로구 3"],
+            texts: ["종로구 6"],
             styles: [
               {
                 width: "70px",
@@ -179,10 +182,9 @@ function ViewRecordPage() {
             clustererC.addMarker(marker);
           });
         });
-      };
+      }
       //document.head.appendChild(script);
     }
-
   }, [positions, positionsA, positionsB, positionsC]);
 
   return (
@@ -198,4 +200,3 @@ function ViewRecordPage() {
 }
 
 export default ViewRecordPage;
-

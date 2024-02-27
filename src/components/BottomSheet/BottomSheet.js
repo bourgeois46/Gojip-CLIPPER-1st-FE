@@ -46,7 +46,7 @@ const BottomSheet = ({ children }) => {
       }}
       dragConstraints={{ top: 100, bottom: 0 }}
       dragElastic={0.2}
-      style={{ overflow: "visible", height }} // 높이를 동적으로 조절
+      style={{ overflow: "visible", height }}
     >
       <Header />
       <S.ContentWrapper>
@@ -83,6 +83,18 @@ const BottomSheet = ({ children }) => {
           <S.TextInfoA>서울특별시 종로구</S.TextInfoA>
           <S.TextInfoA>도로명길 12</S.TextInfoA>
           <S.Line top={325} />
+        </S.HouseInfo>
+
+        <S.HouseInfo>
+          <S.Image src={homeblack} alt="homeblack" />
+          <S.TextInfoContainer>
+            <S.TextInfo>월세</S.TextInfo>
+            <S.TextInfo>위치상세</S.TextInfo>
+          </S.TextInfoContainer>
+          <S.TextInfoA>1000/80</S.TextInfoA>
+          <S.TextInfoA>서울특별시 종로구</S.TextInfoA>
+          <S.TextInfoA>홍지동 125번지</S.TextInfoA>
+          <S.Line top={510} />
         </S.HouseInfo>
 
         <S.HouseInfo>
