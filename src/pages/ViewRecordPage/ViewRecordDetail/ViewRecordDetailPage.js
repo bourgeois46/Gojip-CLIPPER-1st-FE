@@ -17,7 +17,10 @@ function ViewRecordDetailPage() {
     <div className="viewRecordDetail">
       <div className="content">
         <div className="place-yellow">서울특별시 종로구 도로명길 12</div>
-        <MapContainerDetail className="map-circle" searchPlace="강남역" />
+        <MapContainerDetail
+          className="map-circle"
+          searchPlace="종로구 종로1길 36"
+        />
 
         <ViewCharge />
         <ViewHome />

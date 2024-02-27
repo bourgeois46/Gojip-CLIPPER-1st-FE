@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import "./RecordPage.css";
 import ChargeBox from "./Charge/ChargeBox";
 import HomeBox from "./Home/HomeBox";
@@ -13,6 +13,7 @@ import ImageBox from "./ImagePlus/ImageBox";
 import CollectionBox from "./Collection/CollectionBox";
 import record_pre from "../../assets/images/record_pre.png";
 import { saveChecklist } from '../../api/saveChecklist';
+import complete_img from "../../assets/images/complete_img.png";
 
 function RecordPage() {
   const [isOneChecked, handleOneCheckboxChange] = useOneCheckbox();
@@ -20,10 +21,20 @@ function RecordPage() {
   const [iconChecked, handleIconCheck] = useOneCheckbox();
   const addressName = localStorage.getItem('address');
   const [checklist, setChecklist] = useState({/* Initial checklist state */});
+  const navigate = useNavigate();
+  const [showImage, setShowImage] = useState(false);
+
 
   const handleSaveClick = async () => {
-    const data = await saveChecklist();
-    console.log(data);
+    //const data = await saveChecklist();
+    //console.log(data);
+
+    setShowImage(true); // 이미지 표시 시작
+
+    setTimeout(() => {
+      setShowImage(false); // 이미지 표시 종료
+      navigate("/"); // 메인 페이지로 이동
+    }, 1000); // 1초 후 실행
   };
 
 
@@ -59,6 +70,20 @@ function RecordPage() {
         </Link>
         <button className="btn-bottom" onClick={handleSaveClick}>저장하기</button>
       </div>
+
+      {showImage && (
+        <img
+          src={complete_img}
+          alt="Complete"
+          style={{
+            position: "fixed",
+            top: "50%",
+            left: "50%",
+            transform: "translate(-50%, -50%)",
+            zIndex: 1000,
+          }}
+        />
+      )}
     </div>
   );
 }

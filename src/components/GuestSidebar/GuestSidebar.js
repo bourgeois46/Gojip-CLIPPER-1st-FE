@@ -25,6 +25,7 @@ const GuestSidebar = ({ setIsSidebarOpen }) => {
                 to={menu.path}
                 key={index}
                 style={{ color: "black", textDecoration: "none" }}
+                onClick={closeSidebar}
               >
                 <GuestSidebarItem menu={menu} />
               </NavLink>

@@ -1,10 +1,10 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, Link  } from "react-router-dom";
 import "./UserSidebar.css";
 import UserSidebarItem from "./UserSidebarItem.js";
 import sidelogo from "../../assets/images/sideLogo.png";
 
-const UserSidebar = () => {
+const UserSidebar = ({ setIsSidebarOpen }) => {
   const menus = [
     { name: "기록 하기", path: "/record" },
     { name: "기록 보기", path: "/view" },
@@ -12,6 +12,10 @@ const UserSidebar = () => {
     { name: "도움받기", path: "/mypage" },
     { name: "집구하는 팁", path: "/mypage" },
   ];
+
+  const closeSidebar = () => {
+    setIsSidebarOpen(false);
+  };
 
   return (
     <div className="usersidebar_container">
@@ -25,6 +29,7 @@ const UserSidebar = () => {
                 to={menu.path}
                 key={index}
                 style={{ color: "black", textDecoration: "none" }}
+                onClick={closeSidebar}
               >
                 <UserSidebarItem menu={menu} />
               </NavLink>
