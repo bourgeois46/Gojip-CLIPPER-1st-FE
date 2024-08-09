@@ -1,38 +1,44 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, Link  } from "react-router-dom";
 import "./UserSidebar.css";
 import UserSidebarItem from "./UserSidebarItem.js";
 import sidelogo from "../../assets/images/sideLogo.png";
-import Footer from "../Footer/Footer.js";
 
-function UserSidebar() {
+const UserSidebar = ({ setIsSidebarOpen }) => {
   const menus = [
-    { name: "기록 하기", path: "/", id: 0 },
-    { name: "기록 보기", path: "/", id: 1 },
-    { name: "도움 받기", path: "/", id: 2 },
-    { name: "집구하는 팁", path: "/", id: 3 },
-    { name: "마이페이지", path: "/", id: 4 },
+    { name: "기록 하기", path: "/record" },
+    { name: "기록 보기", path: "/view" },
+    { name: "마이페이지", path: "/mypage" },
+    { name: "도움받기", path: "/mypage" },
+    { name: "집구하는 팁", path: "/mypage" },
   ];
 
+  const closeSidebar = () => {
+    setIsSidebarOpen(false);
+  };
+
   return (
-    <div>
-      <div className="usersidebar_parent">
-        <div className="usersidebar">
-          <div className="img-container">
-            <img src={sidelogo} alt="sidelogo" />
-            {menus.map((menu, id) => {
-              return (
-                <NavLink className="nav-link" to={menu.path} key={id}>
-                  <UserSidebarItem menu={menu} />
-                </NavLink>
-              );
-            })}
-            <Footer className="Footer" />
-          </div>
+    <div className="usersidebar_container">
+      <div className="usersidebar">
+        <div className="img-container">
+          <img src={sidelogo} alt="sidelogo" className="side-logo" />
+          {menus.map((menu, index) => {
+            return (
+              <NavLink
+                className="nav-link"
+                to={menu.path}
+                key={index}
+                style={{ color: "black", textDecoration: "none" }}
+                onClick={closeSidebar}
+              >
+                <UserSidebarItem menu={menu} />
+              </NavLink>
+            );
+          })}
         </div>
       </div>
     </div>
   );
-}
+};
 
 export default UserSidebar;

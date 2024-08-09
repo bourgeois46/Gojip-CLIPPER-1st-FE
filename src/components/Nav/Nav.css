@@ -1,42 +1,54 @@
-.nav-container {
-
-  height: calc(var(--vh, 1vh) * 15);
-  position: relative;
+.nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 30px;
+  z-index: 2;
+  display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 1.5vh;
+  transition: background-color ease-in;
+}
+
+.nav-white {
   background-color: white;
-  border-bottom: 0.2vh solid #ccc;
+  width: 400px;
+  height: 130px;
 }
 
 .go-home {
-  height: calc(var(--vh, 1vh) * 20);
   position: absolute;
+  margin-left: 17px;
+  width: 420px;
+  top: 50px;
   display: flex;
-  align-items: center;
+  color: #333333;
   font-family: "Inter";
   font-style: normal;
   font-size: 2em;
   font-weight: bold;
-  color: #333333;
-  padding: 1vh;
-  object-fit: contain;
+}
+
+.bottom-line {
+  position: absolute;
+  border: none;
+  border-top: 1px solid #ccc;
+  top: 95px;
+  width: 400px;
 }
 
 .homeyellow-icon {
-  height: calc(var(--vh, 1vh) * 30);
   position: absolute;
-  top: 75%;
-  margin-left: 85px;
-  width: 3vh;
-  object-fit: contain;
-  transform: translateY(-50%);
+  margin-right: 100px;
+  margin-left: 105px;
+  width: 35px;
+  top: 55px;
 }
 
 .sidebarbutton-icon {
   position: absolute;
-  top: 75%;
-  right: 2vh;
-  object-fit: contain;
-  transform: translateY(-50%);
+  margin-left: 340px;
+  width: 30px;
+  top: 60px;
+  z-index: 1;
 }

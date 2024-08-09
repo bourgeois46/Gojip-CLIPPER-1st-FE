@@ -1,0 +1,19 @@
+.record-page {
+  height: 100vh;
+  background-color: white;
+  position: relative;
+}
+
+.map-container {
+  padding-top: 190px;
+}
+
+.text {
+  position: absolute;
+  top: 145px;
+  left: 25px;
+  font-family: "Inter";
+  font-style: normal;
+  font-size: 1.5em;
+  font-weight: bold;
+}

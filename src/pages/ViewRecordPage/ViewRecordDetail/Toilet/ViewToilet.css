@@ -1,0 +1,96 @@
+.toilet-view{
+    margin-top: 38px;
+}
+
+.viewToilet-title{
+    font-size: 15.77px;
+    font-weight: bold;
+    margin-left: 17.63px;
+}
+
+.viewToilet-item-row{
+    display: flex;
+    flex-direction: row;
+}
+
+.viewToilet-details{
+    display: flex;
+    flex-direction: column;
+}
+
+.viewToilet-text1{
+    margin-left: 30.67px;
+    font-size: 13.14px;
+    text-align: left;
+    margin-top: 24px;
+}
+.viewToilet-text2{
+    margin-left: 30.67px;
+    font-size: 13.14px;
+    text-align: left;
+    margin-top: 25px;
+}
+.viewToilet-text3{
+    margin-left: 30.67px;
+    font-size: 13.14px;
+    text-align: left;
+    margin-top: 25px;
+}
+.viewToilet-text4{
+    margin-left: 30.67px;
+    font-size: 13.14px;
+    text-align: left;
+    margin-top: 25px;
+}
+.viewToilet-text5{
+    margin-left: 30.67px;
+    font-size: 13.14px;
+    text-align: left;
+    margin-top: 25px;
+}
+.viewToilet-text6{
+    margin-left: 30.67px;
+    font-size: 13.14px;
+    text-align: left;
+    margin-top: 25px;
+}
+
+.line-viewToilet{
+    width: 1px;
+    height: 263px;
+    background-color: #C8C8C8;
+    margin-left: 25.33px;
+    margin-right: 19px;
+    margin-top: 12.96px;
+}
+
+.viewToilet-img1{
+    width: 36px;
+    height: 36px;
+    margin-top: 11px;
+}
+.viewToilet-img2{
+    width: 36px;
+    height: 36px;
+    margin-top: 7px;
+}
+.viewToilet-img3{
+    width: 36px;
+    height: 36px;
+    margin-top: 7px;
+}
+.viewToilet-img4{
+    width: 36px;
+    height: 36px;
+    margin-top: 7px;
+}
+.viewToilet-img5{
+    width: 36px;
+    height: 36px;
+    margin-top: 7px;
+}
+.viewToilet-img6{
+    width: 36px;
+    height: 36px;
+    margin-top: 7px;
+}

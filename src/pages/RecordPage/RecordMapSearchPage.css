@@ -1,0 +1,77 @@
+.recordSearchPage {
+    height: 100vh;
+    background-color: white;
+    display: flex;
+
+}
+
+.title{
+    margin-top: 140px;
+    text-align: center;
+    color: black;
+    font-size: 22px;
+    font-weight: bold;
+    
+}
+
+.detail {
+    margin-top: 5px;
+    text-align: center;
+    color: black;
+    font-size: 15px;
+
+}
+
+.search-bar {
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 347.73px;
+    height: 57px;
+    border-radius: 20px;
+    border: 1px solid #C8C8C8;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-left: 15px;
+
+}
+
+.search-input {
+    flex-grow: 1;
+    border: none;
+    width: 347.73px;
+    height: 40px;
+    outline: none;
+
+}
+
+.search-btn {
+    background-color: transparent;
+    box-shadow: none;
+    border: none;
+}
+
+.cloumn{
+    display: flex;
+    flex-direction: column;
+}
+
+
+.btn {
+    margin-top: 30px;
+height: 55.85px;
+width: 212.47px;
+background-color: #FFEF64;
+color: black;
+font-size: 17.27px;
+text-align: center;
+margin-left: 89px;
+border: none;
+border-radius: 57.58px;
+font-weight: bold;
+cursor: pointer;
+display: flex;
+justify-content: center;
+align-items: center;
+}

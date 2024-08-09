@@ -1,0 +1,23 @@
+.plus-view{
+    margin-top: 235px;
+}
+
+.viewPlus-column{
+    display: flex;
+    flex-direction: column;
+}
+
+.viewPlus-title{
+    font-size: 15.77px;
+    font-weight: bold;
+    margin-left: 17.63px;
+}
+
+.viewPlus-detail{
+    width: 353px;
+    height: 130px;
+    background-color: #F5F5F5;
+    border-radius: 20px;
+    margin-left: 22px;
+    margin-top: 15px;
+}

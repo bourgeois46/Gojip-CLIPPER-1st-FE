@@ -1,0 +1,106 @@
+.charge-view {
+    margin-top: 59px;
+
+}
+
+.charge-item-row-v{
+    display: flex;
+    flex-direction: row;
+
+}
+
+.charge-title-v {
+    font-size: 15.77px;
+    font-weight: bold;
+    margin-left: 17.63px;
+}
+
+.charge-details-v1 {
+    display: flex;
+    flex-direction: column;
+    margin-top: 27px;
+    margin-top: 24.72px;
+}
+
+
+.charge-details-v {
+    display: flex;
+    flex-direction: column;
+    margin-top: 27px;
+}
+
+
+.charge-label-deposit-v {
+    margin-left: 30.67px;
+    font-size: 13.14px;
+    text-align: left;
+}
+
+.charge-label-monthly-rent-v {
+    margin-left: 30.67px;
+    font-size: 13.14px;
+    text-align: left;
+    margin-top: 38.28px;
+}
+
+.item-row-v{
+    display: flex;
+    flex-direction: row;
+}
+
+.item-row-v1{
+    display: flex;
+    flex-direction: row;
+    margin-top: 34px;
+}
+
+.deposit-v{
+    font-size: 13.14px;
+    
+}
+
+.slash-v{
+    font-size: 13.14px;
+    margin-left: 5px;
+}
+
+.monthly-v{
+    font-size: 13.14px;
+    margin-left: 5px;
+}
+
+.unit-v {
+    font-size: 13.14px;
+    font-weight: bold;
+    margin-left: 5px;
+}
+
+.maintenance-detail-v{
+    font-size: 13.14px;
+}
+
+.maintenance-v{
+    font-size: 13.14px;
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+.maintenance-real-v{
+    font-size: 13.14px;
+    margin-left: 5px;
+}
+
+.maintenance-unit-v{
+    font-size: 13.14px;
+    font-weight: bold;
+    margin-left: 5px;
+}
+
+.line-charge-v {
+    width: 1px;
+    height: 85px;
+    background-color: #C8C8C8;
+    margin-left: 21.33px;
+    margin-right: 17.69px;
+    margin-top: 23px;
+}
